@@ -6,6 +6,80 @@
 
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
+  // 모바일에서 짧은 터치는 링크 클릭, 일정 거리 이상 이동은 드래그로 구분합니다.
+  const pointerState = new WeakMap();
+  const dragThreshold = 10;
+
+  pills.forEach((pill) => {
+    pointerState.set(pill, {
+      pointerId: null,
+      startX: 0,
+      startY: 0,
+      dragged: false
+    });
+
+    pill.addEventListener("pointerdown", (event) => {
+      if (!event.isPrimary) return;
+
+      const state = pointerState.get(pill);
+      state.pointerId = event.pointerId;
+      state.startX = event.clientX;
+      state.startY = event.clientY;
+      state.dragged = false;
+    });
+
+    pill.addEventListener("pointermove", (event) => {
+      const state = pointerState.get(pill);
+      if (!state || state.pointerId !== event.pointerId) return;
+
+      const distance = Math.hypot(
+        event.clientX - state.startX,
+        event.clientY - state.startY
+      );
+
+      if (distance > dragThreshold) {
+        state.dragged = true;
+      }
+    });
+
+    pill.addEventListener("pointerup", (event) => {
+      const state = pointerState.get(pill);
+      if (!state || state.pointerId !== event.pointerId) return;
+
+      const wasDragged = state.dragged;
+      state.pointerId = null;
+
+      // Matter.js가 모바일의 기본 click 이벤트를 막는 경우가 있어
+      // 짧은 터치라면 링크 주소로 직접 이동시킵니다.
+      if (!wasDragged && event.pointerType !== "mouse") {
+        const href = pill.getAttribute("href");
+
+        if (href) {
+          event.preventDefault();
+          window.location.assign(href);
+        }
+      }
+    });
+
+    pill.addEventListener("pointercancel", (event) => {
+      const state = pointerState.get(pill);
+      if (!state || state.pointerId !== event.pointerId) return;
+
+      state.pointerId = null;
+      state.dragged = true;
+    });
+
+    pill.addEventListener("click", (event) => {
+      const state = pointerState.get(pill);
+
+      // 드래그를 마친 뒤 발생하는 의도치 않은 링크 이동을 막습니다.
+      if (state?.dragged) {
+        event.preventDefault();
+        state.dragged = false;
+      }
+    });
+  });
+
   let engine;
   let runner;
   let mouseConstraint;

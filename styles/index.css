@@ -117,7 +117,8 @@
   will-change: transform;
   user-select: none;
   cursor: grab;
-  touch-action: none;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .project-pill:active {
