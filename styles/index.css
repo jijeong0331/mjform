@@ -239,9 +239,10 @@
 
   .hero {
     width: 100vw;
-    height: 100svh;
-    min-height: 650px;
+    min-height: 100dvh;
+    height: auto;
     padding: 0;
+    padding-bottom: calc(120px + env(safe-area-inset-bottom));
   }
 
   .topbar {
@@ -316,7 +317,8 @@
 /* Mobile */
 @media (max-width: 600px) {
   .hero {
-    min-height: 620px;
+    min-height: 100dvh;
+    padding-bottom: calc(120px + env(safe-area-inset-bottom));
   }
 
   .topbar {
@@ -365,8 +367,9 @@
   }
 
   .physics-zone {
-    top: 22vh;
-    height: 78vh;
+    top: 20vh;
+    bottom: 0;
+    height: auto;
   }
 
   .project-pill {
