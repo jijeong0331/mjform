@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <title>Print Design — Portfolio</title>
+  <script src="../js/head.js" data-base=".." data-page-css="../styles/print-design.css"></script>
+</head>
+<body>
+  <main class="print-page">
+    <header
+      data-subpage-header
+      data-title="Print Design"
+      data-base="..">
+    </header>
+
+    <section class="thumbnail-grid" aria-label="Print Design projects">
+      <button class="print-thumbnail print-thumbnail--01" type="button" data-project="0" data-tag="Poster" aria-label="Landmark Poster 작업물 보기"></button>
+      <button class="print-thumbnail print-thumbnail--02" type="button" data-project="1" data-tag="Poster" aria-label="거북이는 의외로 빨리 헤엄친다 작업물 보기"></button>
+      <button class="print-thumbnail print-thumbnail--03" type="button" data-project="2" data-tag="Poster" aria-label="대한민국 헌혈 공모전 작업물 보기"></button>
+      <button class="print-thumbnail print-thumbnail--04" type="button" data-project="3" data-tag="Poster" aria-label="스마트공장 구축 지원 작업물 보기"></button>
+      <button class="print-thumbnail print-thumbnail--05" type="button" data-project="4" data-tag="Flyer" aria-label="Microgen Path-Check Protein 작업물 보기"></button>
+      <button class="print-thumbnail print-thumbnail--06" type="button" data-project="5" data-tag="Flyer" aria-label="NEOGEN Petrifilm Count Plate 작업물 보기"></button>
+      <button class="print-thumbnail print-thumbnail--07" type="button" data-project="6" data-tag="Flyer" aria-label="HAPS HM-2 자동시료균질기 작업물 보기"></button>
+    </section>
+
+    <footer class="print-footer">
+      <p>© 2026 Minjeong Ji. All rights reserved.</p>
+    </footer>
+  </main>
+
+  <div class="thumbnail-cursor-tag" id="thumbnailCursorTag" aria-hidden="true">Poster</div>
+
+  <div class="project-modal" id="projectModal" aria-hidden="true">
+    <div class="project-modal__backdrop" data-close-modal></div>
+
+    <div class="project-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="projectModalTitle">
+      <h2 class="sr-only" id="projectModalTitle">Print Design 작업물 상세 보기</h2>
+
+      <button class="project-modal__nav project-modal__nav--prev" type="button" aria-label="이전 이미지">
+        <img src="../assets/print-design/Arrow_left_icon.svg" alt="" aria-hidden="true">
+      </button>
+
+      <figure class="project-modal__figure">
+        <img class="project-modal__image" src="" alt="">
+      </figure>
+
+      <button class="project-modal__nav project-modal__nav--next" type="button" aria-label="다음 이미지">
+        <img src="../assets/print-design/Arrow_right_icon.svg" alt="" aria-hidden="true">
+      </button>
+
+      <button class="project-modal__close" type="button" data-close-modal>
+        <span class="project-modal__close-icon" aria-hidden="true"></span>
+        <span>닫기</span>
+      </button>
+    </div>
+  </div>
+
+  <script src="../js/subpage-header.js"></script>
+  <script src="../script-print-design.js"></script>
+</body>
+</html>

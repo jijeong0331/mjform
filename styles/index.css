@@ -1,0 +1,482 @@
+.hero {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  min-height: 650px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 68% 56%, rgba(255,255,255,.95), transparent 32%),
+    var(--bg);
+}
+
+.topbar {
+  position: absolute;
+  z-index: 20;
+  top: 28px;
+  left: 34px;
+  right: 34px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  color: var(--muted);
+  font-size: clamp(12px, 1.05vw, 19px);
+  font-weight: 300;
+}
+
+.topbar p {
+  margin: 0;
+}
+
+.topbar p:last-child {
+  grid-column: 2;
+  text-align: center;
+}
+
+.about {
+  position: absolute;
+  z-index: 20;
+  top: 30%;
+  left: 0;
+  display: flex;
+  align-items: center;
+  /* 원의 오른쪽 끝과 텍스트 사이 간격을 해상도와 관계없이 유지 */
+  padding-left: clamp(98px, 6.5vw, 122px);
+  color: var(--blue) !important;
+  font-size: clamp(18px, 1.65vw, 31px);
+}
+
+.about-dot {
+  position: absolute;
+  /* 원의 중심을 화면 왼쪽 경계에 고정해 정확히 절반만 노출 */
+  left: -66px;
+  width: 132px;
+  height: 132px;
+  border-radius: 50%;
+  background: var(--blue);
+}
+
+.headline {
+  position: absolute;
+  z-index: 20;
+  left: 5%;
+  bottom: 10%;
+  pointer-events: none;
+}
+
+.headline h1 {
+  margin: 0;
+  font-size: clamp(88px, 10vw, 196px);
+  line-height: .84;
+  letter-spacing: -0.075em;
+  font-weight: 400;
+}
+
+/* Aeonik TRIAL 적용 영역 */
+.headline h1,
+.topbar .portfolio-link,
+.about strong,
+.con-bt__label {
+  font-family: "Aeonik TRIAL", "SUIT", sans-serif;
+}
+
+.headline p {
+  margin: 34px 0 0 6px;
+  color: var(--muted);
+  font-size: clamp(16px, 1.7vw, 32px);
+  font-weight: 300;
+  letter-spacing: -0.03em;
+}
+
+.physics-zone {
+  position: absolute;
+  z-index: 10;
+  right: 3.2vw;
+  top: 17vh;
+  width: min(57vw, 930px);
+  height: 76vh;
+  min-height: 510px;
+  overflow: visible;
+}
+
+.project-pill {
+  --button-height: clamp(70px, 6.9vw, 100px);
+  --icon-size: calc(var(--button-height) * .76);
+  --icon-svg-size: calc(var(--button-height) * .40);
+  --ring-size: calc(var(--button-height) * .12);
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: max-content;
+  min-width: calc(var(--button-height) * 2.8);
+  height: var(--button-height);
+  border-radius: 999px;
+  color: var(--blue);
+  text-decoration: none;
+  transform-origin: center;
+  will-change: transform;
+  user-select: none;
+  cursor: grab;
+  touch-action: none;
+}
+
+.project-pill:active {
+  cursor: grabbing;
+}
+
+.con-bt__base {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 1.5px solid #e7e9f4;
+  background:
+    linear-gradient(90deg, rgb(255 255 255) 60%, #e2e4ee 100%),
+    linear-gradient(90deg, rgb(245 245 245) 46%, rgb(245 245 245) 50%);
+  box-shadow:
+    0 10px 15px -3px rgba(46, 49, 69, .10),
+    0 4px 6px -2px rgba(46, 49, 69, .05);
+}
+
+.con-bt__glass {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: calc(var(--button-height) * .20);
+  padding:
+    0
+    calc(var(--button-height) * .50)
+    0
+    calc(var(--button-height) * .12);
+  border-radius: inherit;
+  border: 2px solid #fff;
+  overflow: hidden;
+  backdrop-filter: blur(75px);
+  -webkit-backdrop-filter: blur(75px);
+}
+
+.con-bt__glass::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  box-shadow:
+    inset 36px 33px 5px -35px rgba(255, 255, 255, .5),
+    inset 7px 20px 10px -20px #b3b3b3,
+    inset 5px -18px 10px -20px #b3b3b3,
+    inset 0 0 219px 0 rgba(242, 242, 242, .5);
+}
+
+.con-bt__glass::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: inherit;
+  pointer-events: none;
+  padding: var(--ring-size);
+  background: linear-gradient(135deg, #fff 0%, #ebeff3 50%, #f0f0f3 100%);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+}
+
+.con-bt__icon {
+  position: relative;
+  z-index: 2;
+  width: var(--icon-size);
+  height: var(--icon-size);
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  border: 1px solid #eff0f7;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.con-bt__icon svg,
+.con-bt__icon img {
+  width: var(--icon-svg-size);
+  height: var(--icon-svg-size);
+  display: block;
+  object-fit: contain;
+}
+
+.con-bt__label {
+  position: relative;
+  z-index: 2;
+  display: block;
+  font-family: "Aeonik TRIAL", "SUIT", sans-serif;
+  font-size: calc(var(--button-height) * .49);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -.02em;
+  color: #0f2fff;
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+
+.project-pill:hover .con-bt__base {
+  box-shadow:
+    0 14px 20px -4px rgba(46, 49, 69, .16),
+    0 5px 8px -3px rgba(46, 49, 69, .08);
+}
+
+
+/* Tablet */
+@media (max-width: 1100px) {
+  body {
+    overflow: hidden;
+  }
+
+  .hero {
+    width: 100vw;
+    height: 100svh;
+    min-height: 650px;
+    padding: 0;
+  }
+
+  .topbar {
+    top: 18px;
+    left: 18px;
+    right: 18px;
+    display: block;
+    font-size: clamp(13px, 2.2vw, 18px);
+    line-height: 1.65;
+  }
+
+  .topbar p:first-child {
+    width: 180px;
+  }
+
+  .topbar p:last-child {
+    margin-top: 28px;
+    text-align: left;
+  }
+
+  .about {
+    z-index: 30;
+    top: 22px;
+    right: 18px;
+    left: auto;
+    padding-left: 0;
+    gap: 14px;
+    font-size: clamp(15px, 2.2vw, 20px);
+  }
+
+  .about-dot {
+    position: static;
+    order: 2;
+    width: 44px;
+    height: 44px;
+  }
+
+  .headline {
+    z-index: 24;
+    left: 4.2vw;
+    top: 38vh;
+    bottom: auto;
+  }
+
+  .headline h1 {
+    font-size: clamp(76px, 13vw, 138px);
+    line-height: .88;
+  }
+
+  .headline p {
+    margin: 14px 0 0 3px;
+    max-width: 72vw;
+    font-size: clamp(12px, 1.9vw, 20px);
+  }
+
+  .physics-zone {
+    z-index: 10;
+    top: 26vh;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    overflow: visible;
+  }
+
+  .project-pill {
+    --button-height: clamp(58px, 8.5vw, 82px);
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .hero {
+    min-height: 620px;
+  }
+
+  .topbar {
+    top: 10px;
+    left: 12px;
+    right: 12px;
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .topbar p:first-child {
+    width: 155px;
+  }
+
+  .topbar p:last-child {
+    margin-top: 30px;
+  }
+
+  .about {
+    top: 16px;
+    right: 12px;
+    gap: 8px;
+    font-size: 15px;
+  }
+
+  .about-dot {
+    width: 36px;
+    height: 36px;
+  }
+
+  .headline {
+    left: 5.5vw;
+    top: 30vh;
+  }
+
+  .headline h1 {
+    font-size: clamp(62px, 17vw, 82px);
+    letter-spacing: -0.07em;
+  }
+
+  .headline p {
+    margin-top: 8px;
+    max-width: 86vw;
+    font-size: clamp(9px, 2.45vw, 12px);
+    white-space: nowrap;
+  }
+
+  .physics-zone {
+    top: 22vh;
+    height: 78vh;
+  }
+
+  .project-pill {
+    --button-height: clamp(48px, 13vw, 62px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-pill {
+    transition: none !important;
+  }
+}
+
+
+/* 태블릿·모바일 상단 카테고리 세로 정렬 */
+@media (max-width: 1100px) {
+  .topbar .category-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    width: auto;
+  }
+
+  .topbar .category-nav .nav-item {
+    display: block;
+    white-space: nowrap;
+  }
+
+  .topbar .category-nav .nav-separator {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .topbar .category-nav {
+    gap: 1px;
+  }
+}
+
+
+/* 공통 헤더 링크 */
+.topbar .portfolio-link,
+.about {
+  color: inherit;
+  text-decoration: none;
+}
+
+.topbar .portfolio-link {
+  transition: opacity 180ms ease;
+}
+
+.topbar .portfolio-link:hover,
+.about:hover {
+  opacity: 0.72;
+}
+
+.include-error {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  z-index: 100;
+  margin: 0;
+  font-size: 13px;
+}
+
+/* About Me 원: CodePen heartbeat 모션 */
+.about-dot {
+  transform-origin: center center;
+  will-change: transform;
+}
+
+/* 원 또는 텍스트를 포함한 About Me 영역에 호버하면 원만 박동 */
+.about:hover .about-dot,
+.about:focus-visible .about-dot {
+  animation: about-heartbeat 1.5s ease-in-out infinite both;
+}
+
+/* 기존 공통 hover 투명도에서 About Me는 제외 */
+.about:hover {
+  opacity: 1;
+}
+
+@keyframes about-heartbeat {
+  0% {
+    transform: scale(1);
+    animation-timing-function: ease-out;
+  }
+  10% {
+    transform: scale(0.91);
+    animation-timing-function: ease-in;
+  }
+  17% {
+    transform: scale(0.98);
+    animation-timing-function: ease-out;
+  }
+  33% {
+    transform: scale(0.87);
+    animation-timing-function: ease-in;
+  }
+  45%,
+  100% {
+    transform: scale(1);
+    animation-timing-function: ease-out;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about:hover .about-dot,
+  .about:focus-visible .about-dot {
+    animation: none;
+  }
+}
