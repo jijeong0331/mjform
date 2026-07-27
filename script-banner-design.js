@@ -2,66 +2,80 @@
   const modal = document.getElementById("projectModal");
   if (!modal) return;
 
-  const thumbnails = Array.from(document.querySelectorAll(".print-thumbnail"));
+  const thumbnails = Array.from(document.querySelectorAll(".banner-thumbnail"));
   const image = modal.querySelector(".project-modal__image");
   const prevButton = modal.querySelector(".project-modal__nav--prev");
   const nextButton = modal.querySelector(".project-modal__nav--next");
   const closeButtons = modal.querySelectorAll("[data-close-modal]");
   const cursorTag = document.getElementById("thumbnailCursorTag");
 
-  /*
-   * 각 썸네일의 상세 이미지를 이 배열에 추가하면 됩니다.
-   * 한 장이면 화살표가 자동으로 숨고, 두 장 이상이면 슬라이드 버튼이 표시됩니다.
-   */
   const projects = [
     {
-      title: "안산그린컴퓨터 아카데미 프로모션 X배너",
+      title: "물쳐야 싸다",
       images: [
-        "../assets/print-design/view_00_01.png"
+        "../assets/Banner-design/view_banner_01.png"
       ]
     },
     {
-      title: "Landmark Poster",
+      title: "전국한우협회",
       images: [
-        "../assets/print-design/view_01_01.png"
+        "../assets/Banner-design/view_banner_02-01.png",
+        "../assets/Banner-design/view_banner_02-02.png",
+        "../assets/Banner-design/view_banner_02-03.png",
+        "../assets/Banner-design/view_banner_02-04.png",
+        "../assets/Banner-design/view_banner_02-05.png",
+        "../assets/Banner-design/view_banner_02-06.png"
       ]
     },
     {
-      title: "거북이는 의외로 빨리 헤엄친다",
+      title: "통영케이블카",
       images: [
-        "../assets/print-design/view_02_01.png"
+        "../assets/Banner-design/view_banner_03-01.png",
+        "../assets/Banner-design/view_banner_03-02.png",
+        "../assets/Banner-design/view_banner_03-03.png",
+        "../assets/Banner-design/view_banner_03-04.png",
+        "../assets/Banner-design/view_banner_03-05.png",
+        "../assets/Banner-design/view_banner_03-06.png",
+        "../assets/Banner-design/view_banner_03-07.png"
       ]
     },
     {
-      title: "대한민국 헌혈 공모전",
+      title: "스마트 HACCP 더 쉬워진 품질관리",
       images: [
-        "../assets/print-design/view_03_01.png"
+        "../assets/Banner-design/view_banner_04-01.png",
+        "../assets/Banner-design/view_banner_04-02.png",
+        "../assets/Banner-design/view_banner_04-03.png",
+        "../assets/Banner-design/view_banner_04-04.png"
       ]
     },
     {
-      title: "스마트공장 구축 지원",
+      title: "스마트 HACCP 궁금증 무엇이든 물어보세요",
       images: [
-        "../assets/print-design/view_04_01.png"
+        "../assets/Banner-design/view_banner_05-01.png",
+        "../assets/Banner-design/view_banner_05-02.png",
+        "../assets/Banner-design/view_banner_05-03.png",
+        "../assets/Banner-design/view_banner_05-04.png",
+        "../assets/Banner-design/view_banner_05-05.png",
+        "../assets/Banner-design/view_banner_05-06.png",
+        "../assets/Banner-design/view_banner_05-07.png",
+        "../assets/Banner-design/view_banner_05-08.png",
+        "../assets/Banner-design/view_banner_05-09.png",
+        "../assets/Banner-design/view_banner_05-10.png",
+        "../assets/Banner-design/view_banner_05-11.png",
+        "../assets/Banner-design/view_banner_05-12.png"
       ]
     },
     {
-      title: "Microgen Path-Check Protein",
+      title: "계란·닭고기·오리고기 등급이 있어요",
       images: [
-        "../assets/print-design/view_05_01.png",
-        "../assets/print-design/view_05_02.png"
-      ]
-    },
-    {
-      title: "NEOGEN Petrifilm Count Plate",
-      images: [
-        "../assets/print-design/view_06_01.png",
-        "../assets/print-design/view_06_02.png"
-      ]
-    },
-    {
-      title: "HAPS HM-2 자동시료균질기",
-      images: [
-        "../assets/print-design/view_07_01.png"
+        "../assets/Banner-design/view_banner_06-01.png",
+        "../assets/Banner-design/view_banner_06-02.png",
+        "../assets/Banner-design/view_banner_06-03.png",
+        "../assets/Banner-design/view_banner_06-04.png",
+        "../assets/Banner-design/view_banner_06-05.png",
+        "../assets/Banner-design/view_banner_06-06.png",
+        "../assets/Banner-design/view_banner_06-07.png",
+        "../assets/Banner-design/view_banner_06-08.png"
       ]
     }
   ];
@@ -107,9 +121,7 @@
     document.body.classList.remove("is-modal-open");
     image.removeAttribute("src");
 
-    if (lastFocusedElement) {
-      lastFocusedElement.focus();
-    }
+    if (lastFocusedElement) lastFocusedElement.focus();
   }
 
   thumbnails.forEach((thumbnail, index) => {
@@ -147,23 +159,13 @@
     updateModal();
   });
 
-  closeButtons.forEach((button) => {
-    button.addEventListener("click", closeModal);
-  });
+  closeButtons.forEach((button) => button.addEventListener("click", closeModal));
 
   document.addEventListener("keydown", (event) => {
     if (!modal.classList.contains("is-open")) return;
 
-    if (event.key === "Escape") {
-      closeModal();
-    }
-
-    if (event.key === "ArrowLeft" && !prevButton.hidden && !prevButton.disabled) {
-      prevButton.click();
-    }
-
-    if (event.key === "ArrowRight" && !nextButton.hidden && !nextButton.disabled) {
-      nextButton.click();
-    }
+    if (event.key === "Escape") closeModal();
+    if (event.key === "ArrowLeft" && !prevButton.hidden && !prevButton.disabled) prevButton.click();
+    if (event.key === "ArrowRight" && !nextButton.hidden && !nextButton.disabled) nextButton.click();
   });
 })();

@@ -8,23 +8,23 @@ body.is-modal-open {
   overflow: hidden;
 }
 
-.print-page {
+.banner-page {
   width: 100%;
-  margin: 0;
+  margin: 0 auto;
   padding: 92px 20px 0;
 }
 
-.thumbnail-grid {
+.banner-grid {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
 }
 
-.print-thumbnail {
+.banner-thumbnail {
   display: block;
   width: 100%;
-  aspect-ratio: 1810 / 1074;
+  aspect-ratio: 1 / 1;
   padding: 0;
   overflow: hidden;
   cursor: pointer;
@@ -39,19 +39,19 @@ body.is-modal-open {
 }
 
 
-.print-thumbnail:focus-visible {
+.banner-thumbnail:focus-visible {
   outline: 3px solid rgba(27, 78, 245, .35);
   outline-offset: 3px;
 }
 
-.print-thumbnail--00 { background-image: url("../assets/print-design/Print%20Design_00.png"); }
-.print-thumbnail--01 { background-image: url("../assets/print-design/Print%20Design_01.png"); }
-.print-thumbnail--02 { background-image: url("../assets/print-design/Print%20Design_02.png"); }
-.print-thumbnail--03 { background-image: url("../assets/print-design/Print%20Design_03.png"); }
-.print-thumbnail--04 { background-image: url("../assets/print-design/Print%20Design_04.png"); }
-.print-thumbnail--05 { background-image: url("../assets/print-design/Print%20Design_05.png"); }
-.print-thumbnail--06 { background-image: url("../assets/print-design/Print%20Design_06.png"); }
-.print-thumbnail--07 { background-image: url("../assets/print-design/Print%20Design_07.png"); }
+
+.banner-thumbnail--01 { background-image: url("../assets/Banner-design/Banner_thumbnail_01.png"); }
+.banner-thumbnail--02 { background-image: url("../assets/Banner-design/Banner_thumbnail_02.png"); }
+.banner-thumbnail--03 { background-image: url("../assets/Banner-design/Banner_thumbnail_03.png"); }
+.banner-thumbnail--04 { background-image: url("../assets/Banner-design/Banner_thumbnail_04.png"); }
+.banner-thumbnail--05 { background-image: url("../assets/Banner-design/Banner_thumbnail_05.png"); }
+.banner-thumbnail--06 { background-image: url("../assets/Banner-design/Banner_thumbnail_06.png"); }
+
 
 
 /* 썸네일 위에서 마우스를 따라오는 작업 유형 태그 */
@@ -88,12 +88,12 @@ body.is-modal-open {
   transform: translate3d(-50%, -50%, 0) scale(1);
 }
 
-.print-footer {
+.banner-footer {
   padding: 63px 0 0;
   text-align: center;
 }
 
-.print-footer p {
+.banner-footer p {
   margin: 0;
   color: #b9bbc4;
   font-size: 12px;
@@ -265,21 +265,28 @@ body.is-modal-open {
   transform: rotate(-45deg);
 }
 
+
+@media (max-width: 1100px) {
+  .banner-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 760px) {
-  .print-page {
+  .banner-page {
     padding: 80px 14px 14px;
   }
 
-  .thumbnail-grid {
+  .banner-grid {
     grid-template-columns: 1fr;
     gap: 12px;
   }
 
-  .print-thumbnail {
+  .banner-thumbnail {
     border-radius: 11px;
   }
 
-  .print-footer {
+  .banner-footer {
     padding-top: 42px;
   }
 
@@ -305,7 +312,7 @@ body.is-modal-open {
 }
 
 @media (max-width: 430px) {
-  .print-page {
+  .banner-page {
     padding-top: 72px;
   }
 

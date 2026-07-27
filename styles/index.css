@@ -39,7 +39,7 @@
   display: flex;
   align-items: center;
   /* 원의 오른쪽 끝과 텍스트 사이 간격을 해상도와 관계없이 유지 */
-  padding-left: clamp(98px, 6.5vw, 122px);
+  padding-left: clamp(98px, 6.5vw, 100px);
   color: var(--blue) !important;
   font-size: clamp(18px, 1.65vw, 31px);
 }

@@ -1,15 +1,16 @@
 <!doctype html>
 <html lang="ko">
 <head>
-  <title>Print Design — Portfolio</title>
-  <script src="../js/head.js" data-base=".." data-page-css="../styles/print-design.css"></script>
+  <title>Banner Design — Portfolio</title>
+  <script src="../js/head.js" data-base=".." data-page-css="../styles/banner.css"></script>
   <link rel="stylesheet" href="../styles/project-common.css">
+
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="MJFORM Portfolio">
   <meta property="og:description" content="브랜드와 사용자를 연결하는 명확하고 담백한 디자인을 기록했습니다.">
   <meta property="og:image" content="https://mjform.vercel.app/assets/social/og-image.png">
-  <meta property="og:url" content="https://mjform.vercel.app/">
+  <meta property="og:url" content="https://mjform.vercel.app/pages/banner.html">
   <meta property="og:site_name" content="MJFORM">
 
   <!-- Twitter(X) -->
@@ -26,34 +27,32 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
 </head>
 <body>
-  <main class="print-page">
+  <main class="banner-page">
     <header
       data-subpage-header
-      data-title="Print Design"
+      data-title="Banner Design"
       data-base="..">
     </header>
 
-    <section class="thumbnail-grid" aria-label="Print Design projects">
-      <button class="print-thumbnail print-thumbnail--00" type="button" data-project="0" data-tag="X-Banner" aria-label="안산그린컴퓨터 아카데미 프로모션 X배너 작업물 보기"></button>
-      <button class="print-thumbnail print-thumbnail--01" type="button" data-project="1" data-tag="Poster" aria-label="Landmark Poster 작업물 보기"></button>
-      <button class="print-thumbnail print-thumbnail--02" type="button" data-project="2" data-tag="Poster" aria-label="거북이는 의외로 빨리 헤엄친다 작업물 보기"></button>
-      <button class="print-thumbnail print-thumbnail--03" type="button" data-project="3" data-tag="Poster" aria-label="대한민국 헌혈 공모전 작업물 보기"></button>
-      <button class="print-thumbnail print-thumbnail--04" type="button" data-project="4" data-tag="Poster" aria-label="스마트공장 구축 지원 작업물 보기"></button>
-      <button class="print-thumbnail print-thumbnail--05" type="button" data-project="5" data-tag="Flyer" aria-label="Microgen Path-Check Protein 작업물 보기"></button>
-      <button class="print-thumbnail print-thumbnail--06" type="button" data-project="6" data-tag="Flyer" aria-label="NEOGEN Petrifilm Count Plate 작업물 보기"></button>
-      <button class="print-thumbnail print-thumbnail--07" type="button" data-project="7" data-tag="Flyer" aria-label="HAPS HM-2 자동시료균질기 작업물 보기"></button>
+    <section class="banner-grid" aria-label="Banner Design projects">
+      <button class="banner-thumbnail banner-thumbnail--01" type="button" data-project="0" data-tag="Banner" aria-label="물쳐야 싸다 이벤트 매너"></button>
+      <button class="banner-thumbnail banner-thumbnail--02" type="button" data-project="1" data-tag="Banner" aria-label="전국한우협회 웹 배너"></button>
+      <button class="banner-thumbnail banner-thumbnail--03" type="button" data-project="2" data-tag="Banner" aria-label="통영케이블카 팝업"></button>
+      <button class="banner-thumbnail banner-thumbnail--04" type="button" data-project="3" data-tag="Card News" aria-label="스마트 HACCP 더 쉬워진 품질관리 카드뉴스"></button>
+      <button class="banner-thumbnail banner-thumbnail--05" type="button" data-project="4" data-tag="Card News" aria-label="스마트 HACCP 궁금증 무엇이든 물어보세요 카드뉴스"></button>
+      <button class="banner-thumbnail banner-thumbnail--06" type="button" data-project="5" data-tag="Card News" aria-label="축산물 등급제 카드뉴스"></button>
     </section>
   </main>
 
   <footer class="project-footer">© 2026 Minjeong Ji. All rights reserved.</footer>
 
-  <div class="thumbnail-cursor-tag" id="thumbnailCursorTag" aria-hidden="true">Poster</div>
+  <div class="thumbnail-cursor-tag" id="thumbnailCursorTag" aria-hidden="true">Banner</div>
 
   <div class="project-modal" id="projectModal" aria-hidden="true">
     <div class="project-modal__backdrop" data-close-modal></div>
 
     <div class="project-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="projectModalTitle">
-      <h2 class="sr-only" id="projectModalTitle">Print Design 작업물 상세 보기</h2>
+      <h2 class="sr-only" id="projectModalTitle">Banner Design 작업물 상세 보기</h2>
 
       <button class="project-modal__nav project-modal__nav--prev" type="button" aria-label="이전 이미지">
         <img src="../assets/print-design/Arrow_left_icon.svg" alt="" aria-hidden="true">
@@ -75,6 +74,6 @@
   </div>
 
   <script src="../js/subpage-header.js"></script>
-  <script src="../script-print-design.js"></script>
+  <script src="../script-banner-design.js"></script>
 </body>
 </html>
