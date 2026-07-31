@@ -27,7 +27,7 @@ body {
 .leaflet-hero {
   height: 780px;
   background-color: #e0e0e0;
-  background-image: url("../assets/leaflet/leaflet-hero.png");
+  background-image: url("../assets/leaflet/leaflet-hero.webp");
 }
 
 .leaflet-concept {
@@ -39,7 +39,7 @@ body {
 }
 
 .leaflet-concept {
-  background-image: url("../assets/leaflet/leaflet-concept.png");
+  background-image: url("../assets/leaflet/leaflet-concept.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -158,7 +158,7 @@ body {
 
 .leaflet-photo-card {
   background-color: #e0e0e0;
-  background-image: url("../assets/leaflet/leaflet-archive.png");
+  background-image: url("../assets/leaflet/leaflet-archive.webp");
   background-position: center;
 }
 
@@ -246,11 +246,11 @@ body {
 }
 
 .leaflet-showcase--front {
-  background-image: url("../assets/leaflet/leaflet-front.png");
+  background-image: url("../assets/leaflet/leaflet-front.webp");
 }
 
 .leaflet-showcase--inside {
-  background-image: url("../assets/leaflet/leaflet-inside.png");
+  background-image: url("../assets/leaflet/leaflet-inside.webp");
 }
 
 .leaflet-mockup {
@@ -262,7 +262,7 @@ body {
   border: 1px solid #cfbbaf;
   background-color: #eee;
 
-  background-image: url("../assets/leaflet/leaflet-mockup.png");
+  background-image: url("../assets/leaflet/leaflet-mockup.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
@@ -481,7 +481,7 @@ body {
     display: grid;
     padding-top: 14px;
     padding-bottom: 10px;
-    font-size: 13px;
+    font-size: 14px;
   }
 
   .leaflet-font__row {
@@ -504,6 +504,6 @@ body {
   .leaflet-footer {
     height: 120px;
     padding-bottom: 28px;
-    font-size: 12px;
+    font-size: 14px;
   }
 }

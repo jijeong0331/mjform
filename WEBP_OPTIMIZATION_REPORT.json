@@ -1,0 +1,262 @@
+{
+  "converted_count": 68,
+  "original_bytes": 129880779,
+  "webp_bytes": 21533946,
+  "saved_bytes": 108346833,
+  "reduction_percent": 83.4,
+  "failed": [],
+  "updated_code_files": [
+    "script-banner-design.js",
+    "script-print-design.js",
+    "styles/banner.css",
+    "styles/leaflet.css"
+  ],
+  "remaining_pngs": [
+    "assets/icons/apple-touch-icon.png.png",
+    "assets/icons/favicon-16x16.png",
+    "assets/icons/favicon-32x32.png",
+    "assets/social/og-image.png"
+  ],
+  "missing_references": [
+    {
+      "file": "script-banner-design.js",
+      "ref": "../assets/Banner-design/view_banner_01.webp"
+    },
+    {
+      "file": "script-banner-design.js",
+      "ref": "../assets/Banner-design/view_banner_02-01.webp"
+    },
+    {
+      "file": "script-banner-design.js",
+      "ref": "../assets/Banner-design/view_banner_02-02.webp"
+    },
+    {
+      "file": "script-banner-design.js",
+      "ref": "../assets/Banner-design/view_banner_02-03.webp"
+    },
+    {
+      "file": "script-banner-design.js",
+      "ref": "../assets/Banner-design/view_banner_02-04.webp"
+    },
+    {
+      "file": "script-banner-design.js",
+      "ref": "../assets/Banner-design/view_banner_02-05.webp"
+    },
+    {
+      "file": "script-banner-design.js",
+      "ref": "../assets/Banner-design/view_banner_02-06.webp"
+    },
+    {
+      "file": "script-banner-design.js",
+      "ref": "../assets/Banner-design/view_banner_03-01.webp"
+    },
+    {
+      "file": "script-banner-design.js",
+      "ref": "../assets/Banner-design/view_banner_03-02.webp"
+    },
+    {
+      "file": "script-banner-design.js",
+      "ref": "../assets/Banner-design/view_banner_03-03.webp"
+    },
+    {
+      "file": "script-banner-design.js",
+      "ref": "../assets/Banner-design/view_banner_03-04.webp"
+    },
+    {
+      "file": "script-banner-design.js",
+      "ref": "../assets/Banner-design/view_banner_03-05.webp"
+    },
+    {
+      "file": "script-banner-design.js",
+      "ref": "../assets/Banner-design/view_banner_03-06.webp"
+    },
+    {
+      "file": "script-banner-design.js",
+      "ref": "../assets/Banner-design/view_banner_03-07.webp"
+    },
+    {
+      "file": "script-banner-design.js",
+      "ref": "../assets/Banner-design/view_banner_04-01.webp"
+    },
+    {
+      "file": "script-banner-design.js",
+      "ref": "../assets/Banner-design/view_banner_04-02.webp"
+    },
+    {
+      "file": "script-banner-design.js",
+      "ref": "../assets/Banner-design/view_banner_04-03.webp"
+    },
+    {
+      "file": "script-banner-design.js",
+      "ref": "../assets/Banner-design/view_banner_04-04.webp"
+    },
+    {
+      "file": "script-banner-design.js",
+      "ref": "../assets/Banner-design/view_banner_05-01.webp"
+    },
+    {
+      "file": "script-banner-design.js",
+      "ref": "../assets/Banner-design/view_banner_05-02.webp"
+    },
+    {
+      "file": "script-banner-design.js",
+      "ref": "../assets/Banner-design/view_banner_05-03.webp"
+    },
+    {
+      "file": "script-banner-design.js",
+      "ref": "../assets/Banner-design/view_banner_05-04.webp"
+    },
+    {
+      "file": "script-banner-design.js",
+      "ref": "../assets/Banner-design/view_banner_05-05.webp"
+    },
+    {
+      "file": "script-banner-design.js",
+      "ref": "../assets/Banner-design/view_banner_05-06.webp"
+    },
+    {
+      "file": "script-banner-design.js",
+      "ref": "../assets/Banner-design/view_banner_05-07.webp"
+    },
+    {
+      "file": "script-banner-design.js",
+      "ref": "../assets/Banner-design/view_banner_05-08.webp"
+    },
+    {
+      "file": "script-banner-design.js",
+      "ref": "../assets/Banner-design/view_banner_05-09.webp"
+    },
+    {
+      "file": "script-banner-design.js",
+      "ref": "../assets/Banner-design/view_banner_05-10.webp"
+    },
+    {
+      "file": "script-banner-design.js",
+      "ref": "../assets/Banner-design/view_banner_05-11.webp"
+    },
+    {
+      "file": "script-banner-design.js",
+      "ref": "../assets/Banner-design/view_banner_05-12.webp"
+    },
+    {
+      "file": "script-banner-design.js",
+      "ref": "../assets/Banner-design/view_banner_06-01.webp"
+    },
+    {
+      "file": "script-banner-design.js",
+      "ref": "../assets/Banner-design/view_banner_06-02.webp"
+    },
+    {
+      "file": "script-banner-design.js",
+      "ref": "../assets/Banner-design/view_banner_06-03.webp"
+    },
+    {
+      "file": "script-banner-design.js",
+      "ref": "../assets/Banner-design/view_banner_06-04.webp"
+    },
+    {
+      "file": "script-banner-design.js",
+      "ref": "../assets/Banner-design/view_banner_06-05.webp"
+    },
+    {
+      "file": "script-banner-design.js",
+      "ref": "../assets/Banner-design/view_banner_06-06.webp"
+    },
+    {
+      "file": "script-banner-design.js",
+      "ref": "../assets/Banner-design/view_banner_06-07.webp"
+    },
+    {
+      "file": "script-banner-design.js",
+      "ref": "../assets/Banner-design/view_banner_06-08.webp"
+    },
+    {
+      "file": "script-print-design.js",
+      "ref": "../assets/print-design/view_00_01.webp"
+    },
+    {
+      "file": "script-print-design.js",
+      "ref": "../assets/print-design/view_01_01.webp"
+    },
+    {
+      "file": "script-print-design.js",
+      "ref": "../assets/print-design/view_02_01.webp"
+    },
+    {
+      "file": "script-print-design.js",
+      "ref": "../assets/print-design/view_03_01.webp"
+    },
+    {
+      "file": "script-print-design.js",
+      "ref": "../assets/print-design/view_04_01.webp"
+    },
+    {
+      "file": "script-print-design.js",
+      "ref": "../assets/print-design/view_05_01.webp"
+    },
+    {
+      "file": "script-print-design.js",
+      "ref": "../assets/print-design/view_05_02.webp"
+    },
+    {
+      "file": "script-print-design.js",
+      "ref": "../assets/print-design/view_06_01.webp"
+    },
+    {
+      "file": "script-print-design.js",
+      "ref": "../assets/print-design/view_06_02.webp"
+    },
+    {
+      "file": "script-print-design.js",
+      "ref": "../assets/print-design/view_07_01.webp"
+    },
+    {
+      "file": "index.html",
+      "ref": "/assets/icons/apple-touch-icon.png"
+    },
+    {
+      "file": "styles/print-design.css",
+      "ref": "../assets/print-design/Print%20Design_00.png"
+    },
+    {
+      "file": "styles/print-design.css",
+      "ref": "../assets/print-design/Print%20Design_01.png"
+    },
+    {
+      "file": "styles/print-design.css",
+      "ref": "../assets/print-design/Print%20Design_02.png"
+    },
+    {
+      "file": "styles/print-design.css",
+      "ref": "../assets/print-design/Print%20Design_03.png"
+    },
+    {
+      "file": "styles/print-design.css",
+      "ref": "../assets/print-design/Print%20Design_04.png"
+    },
+    {
+      "file": "styles/print-design.css",
+      "ref": "../assets/print-design/Print%20Design_05.png"
+    },
+    {
+      "file": "styles/print-design.css",
+      "ref": "../assets/print-design/Print%20Design_06.png"
+    },
+    {
+      "file": "styles/print-design.css",
+      "ref": "../assets/print-design/Print%20Design_07.png"
+    },
+    {
+      "file": "pages/banner.html",
+      "ref": "/assets/icons/apple-touch-icon.png"
+    },
+    {
+      "file": "pages/print-design.html",
+      "ref": "/assets/icons/apple-touch-icon.png"
+    },
+    {
+      "file": "pages/leaflet.html",
+      "ref": "/assets/icons/apple-touch-icon.png"
+    }
+  ]
+}

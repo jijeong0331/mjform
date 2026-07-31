@@ -1,0 +1,607 @@
+/* =========================================================
+   AI STORYBOOK
+========================================================= */
+
+body {
+  overflow-x: hidden;
+  background: #f9f9f9;
+  color: #3f332c;
+}
+
+.storybook-page {
+  width: 100%;
+  padding: 92px 20px 0;
+}
+
+.storybook-card {
+  overflow: hidden;
+  border-radius: 25px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(99, 99, 99, 0.2);
+}
+
+.storybook-card h2 {
+  margin: 0;
+  font-family: "SUIT", sans-serif;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.storybook-grid {
+  display: grid;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+/* =========================================================
+   TRAILER
+========================================================= */
+
+.storybook-video {
+  position: relative;
+  height: min(780px, 56.25vw);
+  min-height: 420px;
+  background: #414141;
+}
+
+.storybook-video video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #414141;
+}
+
+.storybook-video__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: grid;
+  width: 94px;
+  height: 94px;
+  padding: 0;
+  place-items: center;
+  transform: translate(-50%, -50%);
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.storybook-video__play:hover {
+  transform: translate(-50%, -50%) scale(1.06);
+}
+
+.storybook-video__play img {
+  display: block;
+  width: 54px;
+  height: 54px;
+  margin-left: 4px;
+}
+
+.storybook-video.is-playing .storybook-video__play {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* =========================================================
+   OVERVIEW / ROLE MATRIX / KEYWORDS
+========================================================= */
+
+.storybook-grid--overview {
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "overview matrix"
+    "keywords matrix";
+}
+
+.storybook-overview {
+  grid-area: overview;
+  padding: 30px;
+  color: #fff;
+  background: #5f351f url("../assets/ai-storybook/project-overview_bg.png") center / cover no-repeat;
+}
+
+.storybook-overview h2,
+.story-concept h2 {
+  font-size: 28px;
+}
+
+.storybook-overview p,
+.story-concept p,
+.style-prompt__intro p {
+  margin: 14px 0 0;
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+.role-matrix {
+  grid-area: matrix;
+  padding: 30px;
+}
+
+.role-matrix h2 {
+  color: #4c4c4c;
+}
+
+.role-matrix table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+  font-size: 18px;
+}
+
+.role-matrix tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.role-matrix th {
+  padding: 10px;
+  background: #ffdf9e;
+  color: #59452e;
+  font-weight: 700;
+}
+
+.role-matrix td {
+  padding: 12px 10px;
+  border-bottom: 1px solid #ececec;
+  text-align: center;
+  line-height: 1;
+}
+
+.role-matrix td:first-child {
+  text-align: left;
+}
+
+.role-dot {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #ff9e21;
+  border-radius: 50%;
+}
+
+.role-dot.is-lead {
+  background: #ff8700;
+  border: none;
+}
+
+.storybook-keywords {
+  grid-area: keywords;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.storybook-keywords div {
+  display: grid;
+  min-height: 100px;
+  padding: 18px;
+  place-items: center;
+  border-radius: 22px;
+  box-shadow: 0 2px 8px rgba(99, 99, 99, 0.16);
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.storybook-keywords div:nth-child(1) { background: #f4d28d; }
+.storybook-keywords div:nth-child(2) { background: #dfa655; }
+.storybook-keywords div:nth-child(3) { background: #9b5d24; color: #fff; }
+.storybook-keywords div:nth-child(4) { background: #4c1d12; color: #fff; }
+
+/* =========================================================
+   CHARACTERS
+========================================================= */
+
+.storybook-grid--characters {
+  grid-template-columns: minmax(0, 28fr) minmax(0, 72fr);
+  width: 100%;
+  max-width: 100%;
+}
+
+.storybook-grid--characters > * {
+  min-width: 0;
+}
+
+.character-card {
+  height: 680px;
+  max-height: 680px;
+  padding: 30px;
+  background-color: #fbf4e5;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: auto calc(100% - 60px);
+}
+
+.character-card h2 {
+  position: relative;
+  z-index: 1;
+  font-size: 24px;
+}
+
+.character-card--toto {
+  background-image: url("../assets/ai-storybook/toto.png");
+}
+
+.character-card--friends {
+  background-image: url("../assets/ai-storybook/Friends.png");
+}
+
+/* =========================================================
+   STORY CONCEPT / STYLE PROMPT
+========================================================= */
+
+.story-concept {
+  margin-top: 30px;
+  padding: 28px 30px;
+  color: #463326;
+  background: #ead1a1 url("../assets/ai-storybook/story-concept_bg.png") center / cover no-repeat;
+}
+
+.style-prompt {
+  margin-top: 30px;
+  padding: 30px;
+}
+
+.style-prompt__content {
+  display: grid;
+  grid-template-columns: 38% 1fr;
+  gap: 30px;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.style-prompt__content > img {
+  width: 100%;
+  height: auto;
+}
+
+.style-prompt__copy {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.style-prompt__copy p {
+  margin: 0;
+  padding: 14px;
+  border-radius: 8px;
+  background: #efefef;
+  font-size: 18px;
+  line-height: 1.45;
+}
+
+.style-prompt__copy .style-prompt__main {
+  background: #f5d79b;
+  font-size: 20px;
+}
+
+/* =========================================================
+   E-BOOK VIEWER
+========================================================= */
+
+.storybook-viewer {
+  margin-top: 30px;
+  padding: 30px;
+  background: #adadad;
+}
+
+.storybook-viewer__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 24px;
+  color: #fff;
+}
+
+.storybook-viewer__header p {
+  margin: 10px 0 0;
+  font-size: 16px;
+}
+
+.storybook-viewer__pdf-link {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 0 18px;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #463227;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.storybook-flipbook-stage {
+  position: relative;
+  display: grid;
+  width: 100%;
+  /* min-height: 720px; */
+  place-items: center;
+  overflow: visible;
+  border-radius: 18px;
+  background: #aaa;
+}
+
+.storybook-flipbook-loading {
+  position: absolute;
+  z-index: 2;
+  color: #fff;
+}
+
+.storybook-flipbook-loading.is-hidden {
+  display: none;
+}
+
+#storybook-flipbook {
+  width: min(100%, 1120px);
+  height: auto;
+  aspect-ratio: 8 / 3;
+  margin: auto;
+}
+
+#storybook-flipbook .stf__parent,
+#storybook-flipbook .stf__wrapper,
+#storybook-flipbook .stf__block {
+  margin: auto !important;
+}
+
+#storybook-flipbook img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.storybook-flipbook-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 22px;
+}
+
+.storybook-flipbook-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.14);
+  color: #fff;
+  font: inherit;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.storybook-flipbook-button:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-1px);
+}
+
+.storybook-flipbook-button:disabled {
+  cursor: default;
+  opacity: 0.35;
+  transform: none;
+}
+
+.storybook-flipbook-page {
+  min-width: 72px;
+  margin: 0;
+  color: #fff;
+  text-align: center;
+  font-size: 17px;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1100px) {
+  .storybook-page {
+    padding-top: 72px;
+  }
+
+  .storybook-video {
+    min-height: 360px;
+  }
+
+  .storybook-grid--overview {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "overview"
+      "keywords"
+      "matrix";
+  }
+
+  .storybook-grid--characters {
+    grid-template-columns: 1fr;
+  }
+
+  .character-card {
+    height: 520px;
+    max-height: none;
+  }
+
+  .style-prompt__content {
+    grid-template-columns: 1fr;
+  }
+
+  .style-prompt__content > img {
+    max-width: 650px;
+    margin: auto;
+  }
+
+  #storybook-flipbook {
+    height: auto;
+    aspect-ratio: 8 / 3;
+  }
+}
+
+@media (max-width: 760px) {
+  .storybook-page {
+    padding: 58px 12px 0;
+  }
+
+  .storybook-card {
+    border-radius: 18px;
+  }
+
+  .storybook-video {
+    height: 56vw;
+    min-height: 240px;
+  }
+
+  .storybook-video__play {
+    width: 70px;
+    height: 70px;
+  }
+
+  .storybook-video__play img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .storybook-grid {
+    gap: 16px;
+    margin-top: 16px;
+  }
+
+  .storybook-overview,
+  .role-matrix,
+  .style-prompt,
+  .storybook-viewer {
+    padding: 20px;
+  }
+
+  .storybook-keywords {
+    gap: 10px;
+  }
+
+  .storybook-keywords div {
+    min-height: 74px;
+    border-radius: 14px;
+    font-size: 17px;
+  }
+
+  .character-card {
+    height: 430px;
+    padding: 20px;
+  }
+
+  .story-concept,
+  .style-prompt,
+  .storybook-viewer {
+    margin-top: 16px;
+  }
+
+  .story-concept {
+    padding: 20px;
+  }
+
+  .storybook-viewer__header {
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 16px;
+  }
+
+  .storybook-viewer__pdf-link {
+    min-height: 38px;
+    padding-inline: 15px;
+    font-size: 14px;
+  }
+
+  .storybook-flipbook-controls {
+    gap: 14px;
+    margin-top: 12px;
+  }
+
+  .storybook-flipbook-button {
+    width: 42px;
+    height: 42px;
+    font-size: 21px;
+  }
+
+  .storybook-flipbook-stage {
+    min-height: 0;
+  }
+
+  #storybook-flipbook {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 8 / 3;
+  }
+}
+
+/* PageFlip이 약 544px 미만에서 단일 페이지 모드로 전환됩니다. */
+@media (max-width: 543px) {
+  #storybook-flipbook {
+    aspect-ratio: 4 / 3;
+  }
+}
+
+@media (max-width: 480px) {
+  .storybook-video {
+    min-height: 210px;
+  }
+
+  .storybook-card h2 {
+    font-size: 23px;
+  }
+
+  .storybook-overview p,
+  .style-prompt__intro p,
+  .story-concept p {
+    font-size: 14px;
+  }
+
+  .role-matrix {
+    overflow-x: auto;
+  }
+
+  .role-matrix table {
+    min-width: 460px;
+    font-size: 14px;
+  }
+
+  .storybook-keywords {
+    grid-template-columns: 1fr;
+  }
+
+  .character-card {
+    height: 360px;
+  }
+
+  .storybook-viewer {
+    padding: 16px;
+  }
+
+  .storybook-flipbook-stage {
+    padding: 12px 0;
+  }
+}
+
+/* 북트레일러 재생 상태 동기화 */
+.storybook-video__play {
+  z-index: 2;
+}
+
+.storybook-video.is-playing .storybook-video__play {
+  visibility: hidden;
+}

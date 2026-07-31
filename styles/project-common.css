@@ -8,12 +8,332 @@
 .project-footer p {
   margin: 0;
   color: #b9bbc4;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 300;
 }
 
 @media (max-width: 760px) {
   .project-footer {
     padding-top: 42px;
+  }
+}
+
+/* =========================================================
+   서브페이지 공통 프로젝트 메뉴
+   ========================================================= */
+.subpage-header__actions {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 14px;
+}
+
+.project-menu-button {
+  position: relative;
+  display: block;
+  flex: 0 0 auto;
+  width: 56px;
+  height: 56px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  transition: transform 180ms ease;
+}
+
+.project-menu-button__base {
+  position: absolute;
+  inset: 0;
+  border: 1.5px solid #e7e9f4;
+  border-radius: inherit;
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.98), rgba(226,228,238,.92)),
+    #f5f5f5;
+  box-shadow:
+    0 10px 15px -3px rgba(46,49,69,.10),
+    0 4px 6px -2px rgba(46,49,69,.05);
+}
+
+.project-menu-button__glass {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  place-items: center;
+  overflow: hidden;
+  border: 2px solid #fff;
+  border-radius: inherit;
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  box-shadow:
+    inset 7px 18px 10px -20px #bac1e5, 
+    inset -17px -13px 10px -20px #dde1ff, 
+    inset 0 0 48px #f4faff;
+}
+
+.project-menu-button__glass::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(circle at 28% 20%, rgba(255,255,255,.68), transparent 46%);
+  pointer-events: none;
+}
+
+.project-menu-button__dot {
+  position: relative;
+  z-index: 2;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--blue, #0f2fff);
+  transition: transform .38s cubic-bezier(.22,1,.36,1), border-radius .24s ease;
+}
+
+.project-menu-button:hover {
+  transform: translateY(-2px);
+}
+
+.subpage-header.is-menu-open .project-menu-button__dot {
+  transform: scale(.72);
+}
+
+.project-menu-panel {
+  position: absolute;
+  z-index: 2;
+  top: 100%;
+  right: 20px;
+  width: min(360px, calc(100vw - 44px));
+  padding: 20px;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #0f2fff;
+  box-shadow: 0 12px 34px rgba(20,32,110,.24);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(calc(100% + 36px));
+  transition:
+    transform .46s cubic-bezier(.22,1,.36,1),
+    opacity .26s ease,
+    visibility 0s linear .46s;
+}
+
+.subpage-header.is-menu-open .project-menu-panel {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+  transition:
+    transform .46s cubic-bezier(.22,1,.36,1),
+    opacity .26s ease,
+    visibility 0s;
+}
+
+.project-menu-panel__link {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  width: 100%;
+  min-height: 54px;
+  padding: 10px 12px;
+  border-radius: 9px;
+  color: #84a1ff;
+  font-family: "Aeonik TRIAL", "SUIT", sans-serif;
+  font-size: 27px;
+  font-weight: 400;
+  line-height: 1;
+  text-decoration: none;
+  transition: color 160ms ease, background-color 160ms ease, transform 160ms ease;
+}
+
+.project-menu-panel__link:hover,
+.project-menu-panel__link:focus-visible {
+  color: #fff;
+  background: rgba(255,255,255,.21);
+  outline: none;
+}
+
+.project-menu-panel__link:active {
+  transform: scale(.985);
+}
+
+.project-menu-panel__link.is-current {
+  color: #fff;
+}
+
+.project-menu-panel__current-dot {
+  flex: 0 0 auto;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+@media (min-width: 1500px) {
+  .subpage-header__actions {
+    gap: 16px;
+  }
+
+  .project-menu-button__dot {
+    width: 22px;
+    height: 22px;
+  }
+
+  .project-menu-panel {
+    width: 500px;
+    padding: 30px;
+    border-radius: 25px;
+  }
+
+  .project-menu-panel__link {
+    min-height: 74px;
+    padding: 13px 12px;
+    border-radius: 10px;
+    font-size: 36px;
+  }
+
+  .project-menu-panel__current-dot {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .project-menu-pane{
+    position: absolute;
+    z-index: 2;
+    top: 100%;
+    right: 20px;
+  }
+}
+
+@media (max-width: 760px) {
+  .subpage-header__actions {
+    gap: 9px;
+  }
+
+  .project-menu-button {
+    width: 46px;
+    height: 46px;
+  }
+
+  .project-menu-button__dot {
+    width: 16px;
+    height: 16px;
+  }
+
+  .project-menu-panel {
+    top: 100%;
+    right: 14px;
+    width: min(320px, calc(100vw - 28px));
+    padding: 16px;
+    border-radius: 18px;
+  }
+
+  .project-menu-panel__link {
+    min-height: 48px;
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 430px) {
+  .subpage-header__actions {
+    gap: 7px;
+  }
+
+  .project-menu-button {
+    width: 42px;
+    height: 42px;
+  }
+
+  .project-menu-panel {
+    top: 100%;
+    right: 10px;
+    width: calc(100vw - 20px);
+    padding: 14px;
+  }
+
+  .project-menu-panel__link {
+    min-height: 44px;
+    padding: 9px 10px;
+    font-size: 22px;
+  }
+}
+
+/* ===== Shared subpage typography system ===== */
+:root {
+  --project-box-title-size: clamp(14px, 2vw, 30px);
+  --project-box-text-size: clamp(14px, 1.35vw, 20px);
+  --project-caption-size: clamp(14px, 1vw, 16px);
+  --project-button-size: clamp(14px, 1.1vw, 18px);
+  --project-title-line-height: 1.2;
+  --project-text-line-height: 1.5;
+}
+
+.project-page {
+  min-width: 0;
+  overflow-x: clip;
+}
+
+/* Reusable typography classes for future subpages. */
+.project-box-title {
+  margin: 0;
+  font-size: var(--project-box-title-size);
+  line-height: var(--project-title-line-height);
+}
+
+.project-box-text {
+  margin: 0;
+  font-size: var(--project-box-text-size);
+  line-height: var(--project-text-line-height);
+}
+
+.project-caption {
+  font-size: var(--project-caption-size);
+}
+
+.project-button-text {
+  font-size: var(--project-button-size);
+}
+
+/* Existing page components mapped to the shared scale. */
+:where(
+  .book-card,
+  .branding-card,
+  .leaflet-card,
+  .storybook-card,
+  .character-card
+) > h2,
+:where(
+  .book-card,
+  .branding-card,
+  .leaflet-card,
+  .storybook-card,
+  .character-card
+) h2:first-child {
+  font-size: var(--project-box-title-size);
+  line-height: var(--project-title-line-height);
+}
+
+:where(
+  .book-concept,
+  .branding-concept__copy,
+  .branding-color-story,
+  .leaflet-concept__copy,
+  .style-prompt__intro
+) p {
+  font-size: var(--project-box-text-size);
+  line-height: var(--project-text-line-height);
+}
+
+@media (max-width: 768px) {
+  :root {
+    --project-box-title-size: clamp(14px, 5vw, 24px);
+    --project-box-text-size: clamp(14px, 3.8vw, 18px);
+    --project-caption-size: 14px;
+    --project-button-size: clamp(14px, 3.6vw, 16px);
   }
 }

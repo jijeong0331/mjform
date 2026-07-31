@@ -136,7 +136,7 @@
   }
 
   .subpage-header__title {
-    font-size: clamp(30px, 9vw, 40px);
+    font-size: clamp(30px, 9vw, 36px);
   }
 
   .home-button {
@@ -161,7 +161,7 @@
   }
 
   .subpage-header__title {
-    font-size: 29px;
+    font-size: 24px;
   }
 
   .home-button {

@@ -1,0 +1,28 @@
+Magazine Preview 수정 위치
+
+1. HTML 구조
+   pages/branding.html
+   "Magazine Preview" 주석/제목이 있는 section을 확인하세요.
+
+2. 디자인과 반응형
+   styles/branding.css
+   파일 맨 아래의 "MAGAZINE PREVIEW" 구역만 수정하면 됩니다.
+
+3. 세로 길이
+   PC:     --magazine-stage-height: 64vh;
+   태블릿: --magazine-stage-height: 62vh;
+   모바일: --magazine-stage-height: 64svh;
+
+   숫자를 낮추면 작아지고, 높이면 커집니다.
+
+4. 플립북 기능
+   js/branding-flipbook.js
+   페이지 수, 이미지 경로, 넘김 속도 등을 수정할 수 있습니다.
+
+정리 내용
+- branding.html 전체 들여쓰기 정리
+- Magazine Preview CSS를 하나의 구역으로 통합
+- 섹션별 주석 추가
+- 중복되거나 의미 없는 height:auto 제거
+- 660px 이하 높이에서 잘림 방지 미디어쿼리 추가
+- JS 기능별 주석 추가

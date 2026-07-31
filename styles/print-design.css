@@ -44,14 +44,14 @@ body.is-modal-open {
   outline-offset: 3px;
 }
 
-.print-thumbnail--00 { background-image: url("../assets/print-design/Print%20Design_00.png"); }
-.print-thumbnail--01 { background-image: url("../assets/print-design/Print%20Design_01.png"); }
-.print-thumbnail--02 { background-image: url("../assets/print-design/Print%20Design_02.png"); }
-.print-thumbnail--03 { background-image: url("../assets/print-design/Print%20Design_03.png"); }
-.print-thumbnail--04 { background-image: url("../assets/print-design/Print%20Design_04.png"); }
-.print-thumbnail--05 { background-image: url("../assets/print-design/Print%20Design_05.png"); }
-.print-thumbnail--06 { background-image: url("../assets/print-design/Print%20Design_06.png"); }
-.print-thumbnail--07 { background-image: url("../assets/print-design/Print%20Design_07.png"); }
+.print-thumbnail--00 { background-image: url("../assets/print-design/Print%20Design_00.webp"); }
+.print-thumbnail--01 { background-image: url("../assets/print-design/Print%20Design_01.webp"); }
+.print-thumbnail--02 { background-image: url("../assets/print-design/Print%20Design_02.webp"); }
+.print-thumbnail--03 { background-image: url("../assets/print-design/Print%20Design_03.webp"); }
+.print-thumbnail--04 { background-image: url("../assets/print-design/Print%20Design_04.webp"); }
+.print-thumbnail--05 { background-image: url("../assets/print-design/Print%20Design_05.webp"); }
+.print-thumbnail--06 { background-image: url("../assets/print-design/Print%20Design_06.webp"); }
+.print-thumbnail--07 { background-image: url("../assets/print-design/Print%20Design_07.webp"); }
 
 
 /* 썸네일 위에서 마우스를 따라오는 작업 유형 태그 */
@@ -96,7 +96,7 @@ body.is-modal-open {
 .print-footer p {
   margin: 0;
   color: #b9bbc4;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 300;
 }
 

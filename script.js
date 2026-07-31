@@ -324,3 +324,69 @@
 
   reducedMotion.addEventListener?.("change", initPhysics);
 })();
+
+/* About Me full-screen sliding panel */
+(() => {
+  const aboutLink = document.querySelector('.about[href="./about.html"]');
+  if (!aboutLink) return;
+
+  const shell = document.createElement('div');
+  shell.className = 'about-panel-shell';
+  shell.setAttribute('aria-hidden', 'true');
+
+  const panel = document.createElement('iframe');
+  panel.className = 'about-panel';
+  panel.title = 'About Me';
+  panel.src = './about.html';
+  panel.setAttribute('loading', 'eager');
+
+  shell.appendChild(panel);
+  document.body.appendChild(shell);
+
+  let closeTimer = null;
+
+  const openPanel = () => {
+    window.clearTimeout(closeTimer);
+    shell.classList.add('is-visible');
+    shell.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('about-panel-open');
+
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => shell.classList.add('is-open'));
+    });
+  };
+
+  const closePanel = () => {
+    shell.classList.remove('is-open');
+    shell.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('about-panel-open');
+
+    closeTimer = window.setTimeout(() => {
+      shell.classList.remove('is-visible');
+      aboutLink.focus({ preventScroll: true });
+    }, 1100);
+  };
+
+  aboutLink.addEventListener('click', (event) => {
+    event.preventDefault();
+    openPanel();
+  });
+
+  window.addEventListener('message', (event) => {
+    if (event.source === panel.contentWindow && event.data === 'close-about-panel') {
+      closePanel();
+    }
+  });
+
+  window.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && shell.classList.contains('is-open')) {
+      closePanel();
+    }
+  });
+
+  window.addEventListener('pageshow', () => {
+    shell.classList.remove('is-open', 'is-visible');
+    shell.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('about-panel-open');
+  });
+})();

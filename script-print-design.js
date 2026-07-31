@@ -17,51 +17,51 @@
     {
       title: "안산그린컴퓨터 아카데미 프로모션 X배너",
       images: [
-        "../assets/print-design/view_00_01.png"
+        "../assets/print-design/view_00_01.webp"
       ]
     },
     {
       title: "Landmark Poster",
       images: [
-        "../assets/print-design/view_01_01.png"
+        "../assets/print-design/view_01_01.webp"
       ]
     },
     {
       title: "거북이는 의외로 빨리 헤엄친다",
       images: [
-        "../assets/print-design/view_02_01.png"
+        "../assets/print-design/view_02_01.webp"
       ]
     },
     {
       title: "대한민국 헌혈 공모전",
       images: [
-        "../assets/print-design/view_03_01.png"
+        "../assets/print-design/view_03_01.webp"
       ]
     },
     {
       title: "스마트공장 구축 지원",
       images: [
-        "../assets/print-design/view_04_01.png"
+        "../assets/print-design/view_04_01.webp"
       ]
     },
     {
       title: "Microgen Path-Check Protein",
       images: [
-        "../assets/print-design/view_05_01.png",
-        "../assets/print-design/view_05_02.png"
+        "../assets/print-design/view_05_01.webp",
+        "../assets/print-design/view_05_02.webp"
       ]
     },
     {
       title: "NEOGEN Petrifilm Count Plate",
       images: [
-        "../assets/print-design/view_06_01.png",
-        "../assets/print-design/view_06_02.png"
+        "../assets/print-design/view_06_01.webp",
+        "../assets/print-design/view_06_02.webp"
       ]
     },
     {
       title: "HAPS HM-2 자동시료균질기",
       images: [
-        "../assets/print-design/view_07_01.png"
+        "../assets/print-design/view_07_01.webp"
       ]
     }
   ];

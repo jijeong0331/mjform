@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>AI Storybook · Team — Portfolio</title>
+  <script data-base=".." data-page-css="../styles/ai-storybook.css" src="../js/head.js"></script>
+  <link href="../styles/project-common.css" rel="stylesheet">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AI Storybook · Team — MJFORM">
+  <meta property="og:description" content="AI를 활용한 어린이 탐정 동화책 제작 프로젝트입니다.">
+  <meta property="og:image" content="https://mjform.vercel.app/assets/social/og-image.png">
+  <link rel="icon" href="/assets/icons/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg">
+</head>
+<body class="project-page">
+  <header data-base=".." data-subpage-header data-menu-key="ai-storybook" data-title="AI Storybook · Team"></header>
+
+  <main class="storybook-page">
+    <section class="storybook-card storybook-video" aria-label="명탐정 토토 북트레일러">
+      <video id="storybook-video" poster="../assets/ai-storybook/video-poster.webp" preload="metadata" playsinline controls>
+        <source src="../assets/ai-storybook/book-trailer.mp4" type="video/mp4">
+        브라우저가 영상 재생을 지원하지 않습니다.
+      </video>
+      <button class="storybook-video__play" id="storybook-video-play" type="button" aria-label="북트레일러 재생">
+        <img src="../assets/ai-storybook/play_icon.svg" alt="">
+      </button>
+    </section>
+
+    <section class="storybook-grid storybook-grid--overview">
+      <article class="storybook-card storybook-overview">
+        <h2>Project Overview</h2>
+        <p>AI를 활용해 어린이 대상의 동화책과 북트레일러를 제작하고 전자책으로 출간한 팀 프로젝트입니다.
+          <br>기획부터 AI 이미지 생성, 편집 디자인, 영상 제작까지 하나의 제작 과정을 경험하며 협업을 통해 콘텐츠를 완성했습니다.</p>
+        <p>동화책과 북트레일러가 하나의 경험으로 이어질 수 있도록 시각적 일관성과 콘텐츠의 흐름을 고려해 제작했으며,
+          <br>AI와 디자인 도구를 함께 활용해 완성도를 높였습니다.</p>
+      </article>
+
+      <article class="storybook-card role-matrix">
+        <h2>Role Matrix</h2>
+        <table>
+          <thead>
+            <tr><th>담당업무</th><th>Lead</th><th>Collaborate</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>프로젝트 기획</td><td><span class="role-dot is-lead"></span></td><td><span class="role-dot"></span></td></tr>
+            <tr><td>스토리 기획 · 편집</td><td><span class="role-dot"></span></td><td><span class="role-dot is-lead"></span></td></tr>
+            <tr><td>AI 기반 일러스트 제작</td><td><span class="role-dot"></span></td><td><span class="role-dot is-lead"></span></td></tr>
+            <tr><td>편집 디자인</td><td><span class="role-dot"></span></td><td><span class="role-dot is-lead"></span></td></tr>
+            <tr><td>북트레일러 기획</td><td><span class="role-dot is-lead"></span></td><td><span class="role-dot"></span></td></tr>
+            <tr><td>모션 그래픽 제작</td><td><span class="role-dot"></span></td><td><span class="role-dot is-lead"></span></td></tr>
+            <tr><td>영상 후반 편집</td><td><span class="role-dot is-lead"></span></td><td><span class="role-dot"></span></td></tr>
+            <tr><td>최종 검수 · 배포</td><td><span class="role-dot is-lead"></span></td><td><span class="role-dot"></span></td></tr>
+          </tbody>
+        </table>
+      </article>
+
+      <div class="storybook-keywords" aria-label="프로젝트 핵심 키워드">
+        <div>AI Storytelling</div>
+        <div>E-Book Publishing</div>
+        <div>Book Trailer</div>
+        <div>Team Collaboration</div>
+      </div>
+    </section>
+
+    <section class="storybook-grid storybook-grid--characters">
+      <article class="storybook-card character-card character-card--toto" role="img" aria-label="탐정 토끼 토토">
+        <h2>주인공 : 토토</h2>
+      </article>
+      <article class="storybook-card character-card character-card--friends" role="img" aria-label="동화책 등장인물">
+        <h2>등장인물</h2>
+      </article>
+    </section>
+
+    <section class="storybook-card story-concept">
+      <h2>Story Concept</h2>
+      <p>사건 해결을 중심으로 전개되는 탐정 이야기 속에 성장과 용기의 메시지를 담은 어린이 동화입니다. 세 가지 의뢰를 해결하며 주인공이 스스로 성장해 나가는 과정을 하나의 이야기로 구성했습니다.</p>
+    </section>
+
+    <section class="storybook-card style-prompt">
+      <div class="style-prompt__intro">
+        <h2>Style Prompt</h2>
+        <p>프로젝트 전반에서 그림체의 일관성을 유지하기 위해 아래 스타일 프롬프트를 공통으로 사용했습니다.<br>장면별 내용은 앞부분에 추가하고, 동일한 스타일 프롬프트를 적용하여 모든 삽화의 분위기와 표현을 통일했습니다.</p>
+      </div>
+      <div class="style-prompt__content">
+        <img src="../assets/ai-storybook/style-prompt_image.png" alt="수채화 동화책 스타일 참고 이미지">
+        <div class="style-prompt__copy">
+          <p class="style-prompt__main">Ink line drawing with loose watercolor wash, wet-on-wet pigment bleed, soft blurred edges where colors meet, thin sketchy pen linework, muted sage green, ochre, and warm beige color palette, classic British storybook illustration style, in the style of Beatrix Potter and Winnie the Pooh illustrations, spontaneous loose brushwork —profile 4f1m1zo —niji 6 —stylize 250 —ar 4:3</p>
+          <p><strong>—profile 4f1m1zo</strong> : 사전에 구축한 무드보드를 참조하여 그림체를 일관되게 유지</p>
+          <p><strong>—niji 6</strong> : 일러스트 표현에 특화된 모델 사용</p>
+          <p><strong>—stylize 250</strong> : 스타일 반영 강도 조절</p>
+          <p><strong>—ar 4:3</strong> : 동화책 편집에 적합한 화면 비율 적용</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="storybook-card storybook-viewer" aria-labelledby="storybook-viewer-title">
+      <div class="storybook-viewer__header">
+        <div>
+          <h2 id="storybook-viewer-title">E-Book Preview</h2>
+          <p>페이지를 드래그하거나 화살표 버튼으로 넘겨보세요.</p>
+        </div>
+        <a class="storybook-viewer__pdf-link" href="../assets/ai-storybook/Detective-Toto.pdf" target="_blank" rel="noopener">PDF 새 창에서 보기</a>
+      </div>
+      <div class="storybook-flipbook-stage">
+        <div class="storybook-flipbook-loading" id="storybook-flipbook-loading" role="status">전자책을 불러오는 중입니다.</div>
+        <div id="storybook-flipbook" aria-label="명탐정 토토 전자책 플립북"></div>
+      </div>
+      <div class="storybook-flipbook-controls" aria-label="전자책 페이지 이동">
+        <button class="storybook-flipbook-button" id="storybook-flipbook-prev" type="button" aria-label="이전 페이지">&larr;</button>
+        <p class="storybook-flipbook-page"><span id="storybook-flipbook-current">1</span> / <span id="storybook-flipbook-total">54</span></p>
+        <button class="storybook-flipbook-button" id="storybook-flipbook-next" type="button" aria-label="다음 페이지">&rarr;</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="project-footer">© 2026 Minjeong Ji. All rights reserved.</footer>
+  <script src="../js/subpage-header.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.js"></script>
+  <script src="../js/ai-storybook-video.js"></script>
+  <script src="../js/ai-storybook-flipbook.js"></script>
+</body>
+</html>

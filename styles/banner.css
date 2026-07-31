@@ -45,12 +45,12 @@ body.is-modal-open {
 }
 
 
-.banner-thumbnail--01 { background-image: url("../assets/Banner-design/Banner_thumbnail_01.png"); }
-.banner-thumbnail--02 { background-image: url("../assets/Banner-design/Banner_thumbnail_02.png"); }
-.banner-thumbnail--03 { background-image: url("../assets/Banner-design/Banner_thumbnail_03.png"); }
-.banner-thumbnail--04 { background-image: url("../assets/Banner-design/Banner_thumbnail_04.png"); }
-.banner-thumbnail--05 { background-image: url("../assets/Banner-design/Banner_thumbnail_05.png"); }
-.banner-thumbnail--06 { background-image: url("../assets/Banner-design/Banner_thumbnail_06.png"); }
+.banner-thumbnail--01 { background-image: url("../assets/Banner-design/Banner_thumbnail_01.webp"); }
+.banner-thumbnail--02 { background-image: url("../assets/Banner-design/Banner_thumbnail_02.webp"); }
+.banner-thumbnail--03 { background-image: url("../assets/Banner-design/Banner_thumbnail_03.webp"); }
+.banner-thumbnail--04 { background-image: url("../assets/Banner-design/Banner_thumbnail_04.webp"); }
+.banner-thumbnail--05 { background-image: url("../assets/Banner-design/Banner_thumbnail_05.webp"); }
+.banner-thumbnail--06 { background-image: url("../assets/Banner-design/Banner_thumbnail_06.webp"); }
 
 
 
@@ -96,7 +96,7 @@ body.is-modal-open {
 .banner-footer p {
   margin: 0;
   color: #b9bbc4;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 300;
 }
 
