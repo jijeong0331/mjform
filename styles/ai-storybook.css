@@ -427,9 +427,6 @@ body {
 ========================================================= */
 
 @media (max-width: 1100px) {
-  .storybook-page {
-    padding-top: 72px;
-  }
 
   .storybook-video {
     min-height: 360px;
@@ -469,7 +466,7 @@ body {
 
 @media (max-width: 760px) {
   .storybook-page {
-    padding: 58px 12px 0;
+    padding: 70px 12px 0;
   }
 
   .storybook-card {
@@ -566,6 +563,12 @@ body {
 @media (max-width: 543px) {
   #storybook-flipbook {
     aspect-ratio: 4 / 3;
+  }
+}
+
+@media (max-width: 513px) {
+  .subpage-header__title {
+     font-size: clamp(20px, 9vw, 24px);
   }
 }
 

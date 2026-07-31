@@ -36,17 +36,36 @@ body {
 .book-intro-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-areas:
+    "overview image-top"
+    "concept image-bottom";
+  grid-template-rows: auto auto;
   gap: 30px;
-  height: 489px;
   margin-top: 30px;
 }
 
+/* 내부 요소를 상위 그리드에 직접 배치해 텍스트와 이미지 높이를 맞춤 */
 .book-intro-copy,
 .book-concept-images {
-  display: grid;
-  grid-template-rows: 160px 299px;
-  gap: 30px;
-  min-width: 0;
+  display: contents;
+}
+
+.book-overview {
+  grid-area: overview;
+}
+
+.book-concept {
+  grid-area: concept;
+}
+
+.book-image--top {
+  grid-area: image-top;
+  min-height: 160px;
+}
+
+.book-image--bottom {
+  grid-area: image-bottom;
+  min-height: 299px;
 }
 
 .book-overview,
@@ -102,7 +121,6 @@ body {
     minmax(0, 438fr)
     minmax(0, 905fr);
   gap: 30px;
-  height: 580px;
   margin-top: 30px;
 }
 
@@ -238,12 +256,7 @@ body {
   }
 
   .book-intro-grid {
-    height: auto;
-  }
-
-  .book-intro-copy,
-  .book-concept-images {
-    grid-template-rows: minmax(160px, auto) 299px;
+    grid-template-rows: auto auto;
   }
 
   .book-comparison-grid {
@@ -277,18 +290,15 @@ body {
 
   .book-intro-grid {
     grid-template-columns: 1fr;
-  }
-
-  .book-intro-copy,
-  .book-concept-images {
-    grid-template-rows: auto;
-  }
-
-  .book-concept-images {
-    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "overview"
+      "concept"
+      "image-top"
+      "image-bottom";
   }
 
   .book-image {
+    min-height: 0;
     aspect-ratio: 905 / 299;
   }
 
@@ -355,7 +365,6 @@ body {
     line-height: 1.5;
   }
 
-  .book-concept-images,
   .book-comparison-grid {
     grid-template-columns: 1fr;
   }
