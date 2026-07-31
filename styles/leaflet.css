@@ -170,6 +170,19 @@ body {
   color: #fff;
 }
 
+
+.horizontal-scroll-guide {
+  display: none;
+  margin: 10px 0 0;
+  color: rgba(255,255,255,.72);
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.leaflet-font__scroll {
+  width: 100%;
+}
+
 .leaflet-font__header,
 .leaflet-font__row {
   display: grid;
@@ -298,16 +311,20 @@ body {
 
 
 @media (max-width: 1080px) {
-  .leaflet-font{
+  .leaflet-font .horizontal-scroll-guide {
+    display: block;
+  }
+
+  .leaflet-font__scroll{
     overflow-x:auto;
     -webkit-overflow-scrolling:touch;
     scrollbar-width:thin;
     scrollbar-color:rgba(255,255,255,.4) transparent;
   }
 
-  .leaflet-font::-webkit-scrollbar{height:8px;}
-  .leaflet-font::-webkit-scrollbar-track{background:transparent;}
-  .leaflet-font::-webkit-scrollbar-thumb{
+  .leaflet-font__scroll::-webkit-scrollbar{height:8px;}
+  .leaflet-font__scroll::-webkit-scrollbar-track{background:transparent;}
+  .leaflet-font__scroll::-webkit-scrollbar-thumb{
     background:rgba(255,255,255,.4);
     border-radius:999px;
   }
