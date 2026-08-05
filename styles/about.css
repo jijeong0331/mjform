@@ -14,7 +14,6 @@ body.about-page {
   position: relative;
   width: 100%;
   min-height: 100vh;
-  /* padding: clamp(54px, 4vw, 78px) clamp(40px, 4.25vw, 82px) 64px; */
   padding: 40px;
   background: #0F2FFF;
 }

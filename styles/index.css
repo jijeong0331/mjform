@@ -38,7 +38,6 @@
   left: 0;
   display: flex;
   align-items: center;
-  /* 원의 오른쪽 끝과 텍스트 사이 간격을 해상도와 관계없이 유지 */
   padding-left: clamp(98px, 6.5vw, 100px);
   color: var(--blue) !important;
   font-size: clamp(18px, 1.65vw, 31px);
@@ -46,7 +45,6 @@
 
 .about-dot {
   position: absolute;
-  /* 원의 중심을 화면 왼쪽 경계에 고정해 정확히 절반만 노출 */
   left: -66px;
   width: 132px;
   height: 132px;
@@ -70,7 +68,6 @@
   font-weight: 400;
 }
 
-/* Aeonik TRIAL 적용 영역 */
 .headline h1,
 .topbar .portfolio-link,
 .about strong,
@@ -102,7 +99,6 @@
   --icon-size: calc(var(--button-height) * .76);
   --icon-svg-size: calc(var(--button-height) * .40);
   --ring-size: calc(var(--button-height) * .12);
-
   position: absolute;
   top: 0;
   left: 0;
@@ -231,8 +227,6 @@
     0 5px 8px -3px rgba(46, 49, 69, .08);
 }
 
-
-/* Tablet */
 @media (max-width: 1100px) {
   body {
     overflow: hidden;
@@ -315,7 +309,6 @@
   }
 }
 
-/* Mobile */
 @media (max-width: 600px) {
   .hero {
     min-height: 100dvh;
@@ -384,8 +377,6 @@
   }
 }
 
-
-/* 태블릿·모바일 상단 카테고리 세로 정렬 */
 @media (max-width: 1100px) {
   .topbar .category-nav {
     display: flex;
@@ -411,8 +402,6 @@
   }
 }
 
-
-/* 공통 헤더 링크 */
 .topbar .portfolio-link,
 .about {
   color: inherit;
@@ -428,28 +417,16 @@
   opacity: 0.72;
 }
 
-.include-error {
-  position: fixed;
-  top: 16px;
-  left: 16px;
-  z-index: 100;
-  margin: 0;
-  font-size: 13px;
-}
-
-/* About Me 원: CodePen heartbeat 모션 */
 .about-dot {
   transform-origin: center center;
   will-change: transform;
 }
 
-/* 원 또는 텍스트를 포함한 About Me 영역에 호버하면 원만 박동 */
 .about:hover .about-dot,
 .about:focus-visible .about-dot {
   animation: about-heartbeat 1.5s ease-in-out infinite both;
 }
 
-/* 기존 공통 hover 투명도에서 About Me는 제외 */
 .about:hover {
   opacity: 1;
 }
@@ -459,18 +436,22 @@
     transform: scale(1);
     animation-timing-function: ease-out;
   }
+
   10% {
     transform: scale(0.91);
     animation-timing-function: ease-in;
   }
+
   17% {
     transform: scale(0.98);
     animation-timing-function: ease-out;
   }
+
   33% {
     transform: scale(0.87);
     animation-timing-function: ease-in;
   }
+
   45%,
   100% {
     transform: scale(1);
@@ -485,7 +466,6 @@
   }
 }
 
-/* ===== About full-screen panel ===== */
 .about-panel-shell {
   position: fixed;
   inset: 0;

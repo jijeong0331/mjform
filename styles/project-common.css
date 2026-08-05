@@ -1,4 +1,3 @@
-/* 프로젝트 서브 페이지 공통 푸터 */
 .project-footer {
   padding: 63px 0 20px;
   text-align: center;
@@ -18,9 +17,6 @@
   }
 }
 
-/* =========================================================
-   서브페이지 공통 프로젝트 메뉴
-   ========================================================= */
 .subpage-header__actions {
   position: relative;
   z-index: 3;
@@ -201,15 +197,6 @@
   }
 }
 
-@media (max-width: 1024px) {
-  .project-menu-pane{
-    position: absolute;
-    z-index: 2;
-    top: 100%;
-    right: 20px;
-  }
-}
-
 @media (max-width: 760px) {
   .subpage-header__actions {
     gap: 9px;
@@ -263,7 +250,6 @@
   }
 }
 
-/* ===== Shared subpage typography system ===== */
 :root {
   --project-box-title-size: clamp(14px, 2vw, 30px);
   --project-box-text-size: clamp(14px, 1.35vw, 20px);
@@ -278,28 +264,6 @@
   overflow-x: clip;
 }
 
-/* Reusable typography classes for future subpages. */
-.project-box-title {
-  margin: 0;
-  font-size: var(--project-box-title-size);
-  line-height: var(--project-title-line-height);
-}
-
-.project-box-text {
-  margin: 0;
-  font-size: var(--project-box-text-size);
-  line-height: var(--project-text-line-height);
-}
-
-.project-caption {
-  font-size: var(--project-caption-size);
-}
-
-.project-button-text {
-  font-size: var(--project-button-size);
-}
-
-/* Existing page components mapped to the shared scale. */
 :where(
   .book-card,
   .branding-card,

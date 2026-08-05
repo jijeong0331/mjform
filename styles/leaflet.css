@@ -32,7 +32,6 @@ body {
 
 .leaflet-concept {
   position: relative;
-  /*height: 252px;*/
   margin-top: 30px;
   background: #111;
   color: #fff;
@@ -135,9 +134,17 @@ body {
   background: linear-gradient(to bottom, var(--start) 0%, var(--start) 19%, #050505 100%);
 }
 
-.leaflet-color__gradient--one { --start: #ffcb6a; }
-.leaflet-color__gradient--two { --start: #fd8911; }
-.leaflet-color__gradient--three { --start: #e43e13; }
+.leaflet-color__gradient--one {
+  --start: #ffcb6a;
+}
+
+.leaflet-color__gradient--two {
+  --start: #fd8911;
+}
+
+.leaflet-color__gradient--three {
+  --start: #e43e13;
+}
 
 .leaflet-color__palette {
   display: grid;
@@ -163,24 +170,10 @@ body {
 }
 
 .leaflet-font {
-  /*min-height: 698px;*/
   margin-top: 30px;
   padding: 30px;
   background: #000;
   color: #fff;
-}
-
-
-.horizontal-scroll-guide {
-  display: none;
-  margin: 10px 0 0;
-  color: rgba(255,255,255,.72);
-  font-size: 14px;
-  line-height: 1.4;
-}
-
-.leaflet-font__scroll {
-  width: 100%;
 }
 
 .leaflet-font__header,
@@ -203,13 +196,13 @@ body {
 }
 
 .leaflet-font__header {
-      padding: 30px 0 0px;
+  padding: 30px 0 0px;
   color: rgba(255,255,255,.8);
   font-size: 22px;
 }
 
-.leaflet-font__header span:nth-child(n+2):nth-child(-n+4),
-.leaflet-font__row > span:nth-child(n+2):nth-child(-n+4) {
+.leaflet-font__header span:nth-child(n/**/+2):nth-child(-n/**/+4),
+.leaflet-font__row > span:nth-child(n/**/+2):nth-child(-n/**/+4) {
   text-align: center;
 }
 
@@ -235,10 +228,22 @@ body {
   white-space: nowrap;
 }
 
-.leaflet-font__sample--title { font-size: clamp(48px, 4.5vw, 86px); }
-.leaflet-font__sample--large { font-size: clamp(36px, 3vw, 56px); font-weight: 700; }
-.leaflet-font__sample--medium { font-size: clamp(28px, 2.2vw, 40px); }
-.leaflet-font__sample--body { font-size: clamp(24px, 2vw, 36px); }
+.leaflet-font__sample--title {
+  font-size: clamp(48px, 4.5vw, 86px);
+}
+
+.leaflet-font__sample--large {
+  font-size: clamp(36px, 3vw, 56px);
+  font-weight: 700;
+}
+
+.leaflet-font__sample--medium {
+  font-size: clamp(28px, 2.2vw, 40px);
+}
+
+.leaflet-font__sample--body {
+  font-size: clamp(24px, 2vw, 36px);
+}
 
 .leaflet-grid--showcase {
   grid-template-columns: 602fr 1208fr;
@@ -269,27 +274,14 @@ body {
 .leaflet-mockup {
   width: 100%;
   height: auto;
-  aspect-ratio: 1840 / 1145;   /* 목업 원본 비율 */
+  aspect-ratio: 1840 / 1145;
   margin-top: 30px;
-
   border: 1px solid #cfbbaf;
   background-color: #eee;
-
   background-image: url("../assets/leaflet/leaflet-mockup.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
-}
-
-.leaflet-footer {
-  display: flex;
-  height: 180px;
-  align-items: flex-end;
-  justify-content: center;
-  padding-bottom: 40px;
-  color: #9a9a9a;
-  font-size: 18px;
-  font-weight: 300;
 }
 
 @media (max-width: 1280px) {
@@ -301,7 +293,6 @@ body {
     height: min(58vw, 740px);
   }
 
-
   .leaflet-font__header,
   .leaflet-font__row {
     grid-template-columns: 1.1fr .9fr .9fr .75fr 1.5fr;
@@ -309,28 +300,29 @@ body {
   }
 }
 
-
 @media (max-width: 1080px) {
-  .leaflet-font .horizontal-scroll-guide {
-    display: block;
-  }
-
-  .leaflet-font__scroll{
+  .leaflet-font {
     overflow-x:auto;
     -webkit-overflow-scrolling:touch;
     scrollbar-width:thin;
     scrollbar-color:rgba(255,255,255,.4) transparent;
   }
 
-  .leaflet-font__scroll::-webkit-scrollbar{height:8px;}
-  .leaflet-font__scroll::-webkit-scrollbar-track{background:transparent;}
-  .leaflet-font__scroll::-webkit-scrollbar-thumb{
+  .leaflet-font::-webkit-scrollbar {
+    height:8px;
+  }
+
+  .leaflet-font::-webkit-scrollbar-track {
+    background:transparent;
+  }
+
+  .leaflet-font::-webkit-scrollbar-thumb {
     background:rgba(255,255,255,.4);
     border-radius:999px;
   }
 
   .leaflet-font__header,
-  .leaflet-font__row{
+  .leaflet-font__row {
     grid-template-columns:160px 150px 150px 120px 330px;
     column-gap:32px;
     width:max-content;
@@ -338,19 +330,35 @@ body {
   }
 
   .leaflet-font__header>*,
-  .leaflet-font__row>*{
+  .leaflet-font__row>* {
     white-space:nowrap;
   }
 
-  .leaflet-font__header{font-size:18px;}
-  .leaflet-font__row{font-size:24px;min-height:100px;}
+  .leaflet-font__header {
+    font-size:18px;
+  }
 
-  .leaflet-font__sample--title{font-size:62px;}
-  .leaflet-font__sample--large{font-size:42px;}
-  .leaflet-font__sample--medium{font-size:32px;}
-  .leaflet-font__sample--body{font-size:28px;}
+  .leaflet-font__row {
+    font-size:24px;
+    min-height:100px;
+  }
+
+  .leaflet-font__sample--title {
+    font-size:62px;
+  }
+
+  .leaflet-font__sample--large {
+    font-size:42px;
+  }
+
+  .leaflet-font__sample--medium {
+    font-size:32px;
+  }
+
+  .leaflet-font__sample--body {
+    font-size:28px;
+  }
 }
-
 
 @media (max-width: 900px) {
   .leaflet-page {
@@ -441,11 +449,21 @@ body {
     justify-self: end;
   }
 
-  .leaflet-font__sample--title { font-size: 54px; }
-  .leaflet-font__sample--large { font-size: 38px; }
-  .leaflet-font__sample--medium { font-size: 29px; }
-  .leaflet-font__sample--body { font-size: 25px; }
+  .leaflet-font__sample--title {
+    font-size: 54px;
+  }
 
+  .leaflet-font__sample--large {
+    font-size: 38px;
+  }
+
+  .leaflet-font__sample--medium {
+    font-size: 29px;
+  }
+
+  .leaflet-font__sample--body {
+    font-size: 25px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -513,14 +531,19 @@ body {
     justify-self: end;
   }
 
-  .leaflet-font__sample--title { font-size: 42px; }
-  .leaflet-font__sample--large { font-size: 30px; }
-  .leaflet-font__sample--medium { font-size: 24px; }
-  .leaflet-font__sample--body { font-size: 21px; }
+  .leaflet-font__sample--title {
+    font-size: 42px;
+  }
 
-  .leaflet-footer {
-    height: 120px;
-    padding-bottom: 28px;
-    font-size: 14px;
+  .leaflet-font__sample--large {
+    font-size: 30px;
+  }
+
+  .leaflet-font__sample--medium {
+    font-size: 24px;
+  }
+
+  .leaflet-font__sample--body {
+    font-size: 21px;
   }
 }

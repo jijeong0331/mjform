@@ -10,9 +10,9 @@
   const menuItems = [
     { key: "book", label: "Book", href: `${base}/pages/book.html` },
     { key: "print", label: "Print", href: `${base}/pages/print-design.html` },
-    { key: "web", label: "Web/App", href: `${base}/index.html#web` },
+    { key: "web", label: "Web/App", href: `${base}/pages/web-app.html` },
     { key: "banner", label: "Banner", href: `${base}/pages/banner.html` },
-    { key: "cassette", label: "Cassette", href: `${base}/index.html#cassette` },
+    { key: "cassette", label: "Cassette", href: `${base}/pages/cassette.html` },
     { key: "ai-storybook", label: "AI Storybook", href: `${base}/pages/ai-storybook.html` },
     { key: "leaflet", label: "Leaflet", href: `${base}/pages/leaflet.html` },
     { key: "branding", label: "Branding", href: `${base}/pages/branding.html` }
@@ -22,6 +22,7 @@
     "Book Design": "book",
     "Print Design": "print",
     "Web/App": "web",
+    "Web • App": "web",
     "Banner Design": "banner",
     "Cassette": "cassette",
     "AI Storybook": "ai-storybook",

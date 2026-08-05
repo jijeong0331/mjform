@@ -1,0 +1,118 @@
+body {
+  min-width: 320px;
+  overflow-x: hidden;
+  background: var(--bg);
+}
+
+.web-app-page {
+  width: 100%;
+  margin: 0;
+  padding: 92px 20px 0;
+}
+
+.web-app-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 30px;
+}
+
+.web-app-thumbnail {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1810 / 1074;
+  overflow: hidden;
+  border: 1px solid #dfdfdf;
+  border-radius: 25px;
+  background-color: #eceef3;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.web-app-thumbnail:focus-visible {
+  outline: 3px solid rgba(27, 78, 245, .35);
+  outline-offset: 3px;
+}
+
+.web-app-thumbnail--01 {
+  background-image: url("../assets/web-app/web-thumbnail-01.webp");
+}
+
+.web-app-thumbnail--02 {
+  background-image: url("../assets/web-app/web-thumbnail-02.webp");
+}
+
+.web-app-thumbnail--03 {
+  background-image: url("../assets/web-app/web-thumbnail-03.webp");
+}
+
+.web-app-thumbnail--04 {
+  background-image: url("../assets/web-app/web-thumbnail-04.webp");
+}
+
+.web-app-cursor-label {
+  position: fixed;
+  z-index: 900;
+  top: 0;
+  left: 0;
+  min-width: 126px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 28px;
+  border: 2px solid var(--blue);
+  border-radius: 999px;
+  background: rgba(27, 78, 245, .28);
+  color: var(--blue);
+  font-family: "Aeonik TRIAL", sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transform: translate3d(-50%, -50%, 0) scale(.92);
+  transition: opacity 120ms ease, transform 120ms ease;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.web-app-cursor-label.is-visible {
+  opacity: 1;
+  transform: translate3d(-50%, -50%, 0) scale(1);
+}
+
+@media (hover: none), (pointer: coarse) {
+  .web-app-cursor-label {
+    display: none;
+  }
+}
+
+@media (max-width: 1400px) {
+  .web-app-grid {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 760px) {
+  .web-app-page {
+    padding: 80px 14px 14px;
+  }
+
+  .web-app-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .web-app-thumbnail {
+    border-radius: 11px;
+  }
+}
+
+@media (max-width: 430px) {
+  .web-app-page {
+    padding-top: 72px;
+  }
+}

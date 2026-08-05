@@ -18,7 +18,7 @@ body.is-modal-open {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
+  gap: 30px;
 }
 
 .print-thumbnail {
@@ -38,23 +38,43 @@ body.is-modal-open {
   transition: none;
 }
 
-
 .print-thumbnail:focus-visible {
   outline: 3px solid rgba(27, 78, 245, .35);
   outline-offset: 3px;
 }
 
-.print-thumbnail--00 { background-image: url("../assets/print-design/Print%20Design_00.webp"); }
-.print-thumbnail--01 { background-image: url("../assets/print-design/Print%20Design_01.webp"); }
-.print-thumbnail--02 { background-image: url("../assets/print-design/Print%20Design_02.webp"); }
-.print-thumbnail--03 { background-image: url("../assets/print-design/Print%20Design_03.webp"); }
-.print-thumbnail--04 { background-image: url("../assets/print-design/Print%20Design_04.webp"); }
-.print-thumbnail--05 { background-image: url("../assets/print-design/Print%20Design_05.webp"); }
-.print-thumbnail--06 { background-image: url("../assets/print-design/Print%20Design_06.webp"); }
-.print-thumbnail--07 { background-image: url("../assets/print-design/Print%20Design_07.webp"); }
+.print-thumbnail--00 {
+  background-image: url("../assets/print-design/Print%20Design_00.webp");
+}
 
+.print-thumbnail--01 {
+  background-image: url("../assets/print-design/Print%20Design_01.webp");
+}
 
-/* 썸네일 위에서 마우스를 따라오는 작업 유형 태그 */
+.print-thumbnail--02 {
+  background-image: url("../assets/print-design/Print%20Design_02.webp");
+}
+
+.print-thumbnail--03 {
+  background-image: url("../assets/print-design/Print%20Design_03.webp");
+}
+
+.print-thumbnail--04 {
+  background-image: url("../assets/print-design/Print%20Design_04.webp");
+}
+
+.print-thumbnail--05 {
+  background-image: url("../assets/print-design/Print%20Design_05.webp");
+}
+
+.print-thumbnail--06 {
+  background-image: url("../assets/print-design/Print%20Design_06.webp");
+}
+
+.print-thumbnail--07 {
+  background-image: url("../assets/print-design/Print%20Design_07.webp");
+}
+
 .thumbnail-cursor-tag {
   position: fixed;
   z-index: 900;
@@ -88,18 +108,6 @@ body.is-modal-open {
   transform: translate3d(-50%, -50%, 0) scale(1);
 }
 
-.print-footer {
-  padding: 63px 0 0;
-  text-align: center;
-}
-
-.print-footer p {
-  margin: 0;
-  color: #b9bbc4;
-  font-size: 14px;
-  font-weight: 300;
-}
-
 .sr-only {
   position: absolute !important;
   width: 1px !important;
@@ -112,7 +120,6 @@ body.is-modal-open {
   border: 0 !important;
 }
 
-/* 작업물 상세 모달 */
 .project-modal {
   position: fixed;
   z-index: 1000;
@@ -188,8 +195,8 @@ body.is-modal-open {
 
 .project-modal__nav img {
   display: block;
-  width: 28px;
-  height: 28px;
+  width: 42px;
+  height: 42px;
   object-fit: contain;
 }
 
@@ -265,6 +272,12 @@ body.is-modal-open {
   transform: rotate(-45deg);
 }
 
+@media (max-width: 1400px) {
+  .thumbnail-grid {
+    gap: 16px;
+  }
+}
+
 @media (max-width: 760px) {
   .print-page {
     padding: 80px 14px 14px;
@@ -277,10 +290,6 @@ body.is-modal-open {
 
   .print-thumbnail {
     border-radius: 11px;
-  }
-
-  .print-footer {
-    padding-top: 42px;
   }
 
   .project-modal__dialog {
@@ -335,7 +344,6 @@ body.is-modal-open {
     font-size: 18px;
   }
 }
-
 
 @media (hover: none), (pointer: coarse) {
   .thumbnail-cursor-tag {

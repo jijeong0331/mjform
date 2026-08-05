@@ -1,0 +1,929 @@
+/* ==========================================================
+   WEB · APP DETAIL — COMMON
+========================================================== */
+
+body.web-detail-body {
+  min-width: 320px;
+  overflow-x: hidden;
+  background: #f9f9f9;
+}
+
+.web-detail-page {
+  width: 100%;
+  margin: 0;
+  padding: 92px 20px 0;
+}
+
+/* ---------- Header ---------- */
+.web-detail-close-button {
+  text-decoration: none;
+}
+
+.web-detail-close-button__icon {
+  position: relative;
+  z-index: 2;
+  width: 24px;
+  height: 24px;
+}
+
+.web-detail-close-button__icon::before,
+.web-detail-close-button__icon::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 28px;
+  height: 3px;
+  border-radius: 999px;
+  background: var(--blue, #0f2fff);
+  transform-origin: center;
+}
+
+.web-detail-close-button__icon::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.web-detail-close-button__icon::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/* Web · App 상세 페이지 View 아이콘만 개별 조정 */
+.web-detail-view-button .home-button__content img {
+  width: 26px;
+  height: 26px;
+}
+
+/* ---------- Hero ---------- */
+.web-detail-hero {
+  display: grid;
+  grid-template-columns: minmax(250px, clamp(280px, 30vw, 500px)) minmax(620px, 1fr);
+  align-items: stretch;
+  gap: 30px;
+  width: 100%;
+}
+
+.web-detail-sidebar {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  min-width: 0;
+}
+
+.web-detail-card,
+.web-detail-before,
+.web-detail-main-shot {
+  border-radius: 24px;
+  box-shadow: 0 2px 8px rgba(99, 99, 99, .2);
+}
+
+.web-detail-card {
+  padding: 28px 30px;
+  background: #fff;
+}
+
+.web-detail-overview {
+  background: #edf3ff;
+  border: 1px solid #9aa7c3;
+}
+
+.web-detail-card h2,
+.web-detail-before h2 {
+  margin: 0 0 16px;
+  color: #111;
+  font-size: clamp(22px, 1.55vw, 30px);
+  font-weight: 800;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.web-detail-card p,
+.web-detail-card li {
+  color: #333;
+  font-size: clamp(14px, 1.12vw, 22px);
+  line-height: 1.52;
+  letter-spacing: -.01em;
+}
+
+.web-detail-card p {
+  margin: 0;
+}
+
+.web-detail-card ul {
+  display: grid;
+  gap: 9px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.web-detail-card li {
+  position: relative;
+  padding-left: 18px;
+}
+
+.web-detail-card li::before {
+  content: "";
+  position: absolute;
+  top: .7em;
+  left: 0;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #91adff;
+  transform: translateY(-50%);
+}
+
+.web-detail-tags {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.web-detail-tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 74px;
+  padding: 16px;
+  border-radius: 22px;
+  color: #fff;
+  background: #3b56d9;
+  box-shadow: 0 2px 8px rgba(99, 99, 99, .2);
+  font-size: clamp(18px, 1.5vw, 30px);
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.web-detail-tag--dark { background: #141c3b; }
+.web-detail-tag--blue { background: #3b56d9; }
+.web-detail-tag--brown { background: #392d24; }
+.web-detail-tag--orange { background: #f08a32; }
+
+.web-detail-focus li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 10px;
+}
+
+.web-detail-focus strong {
+  font-weight: 500;
+}
+
+.web-detail-focus span {
+  color: #a8aab7;
+  font-size: clamp(14px, 1.02vw, 20px);
+}
+
+/* ---------- Main image ---------- */
+.web-detail-main-shot {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.web-detail-main-shot > img,
+.web-detail-main-shot:not(.web-detail-main-shot--scroll) img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+/* ==========================================================
+   WEB-APP-02 : 메인 이미지만 세로 스크롤
+   수정 위치
+   - scrollbar width: 스크롤바 굵기
+   - thumb background: 스크롤바 색상
+========================================================== */
+.web-detail-hero--equal-scroll .web-detail-main-shot--scroll {
+  position: relative;
+  min-height: 0;
+  overflow: hidden;
+  overscroll-behavior: contain;
+}
+
+.web-detail-main-scroll-inner {
+  position: absolute;
+  inset: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-width: auto;
+  scrollbar-color: #7f8cff transparent;
+}
+
+.web-detail-main-scroll-inner img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+.web-detail-main-scroll-inner::-webkit-scrollbar {
+  width: 10px; /* 스크롤바 굵기 */
+}
+
+.web-detail-main-scroll-inner::-webkit-scrollbar-track {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+.web-detail-main-scroll-inner::-webkit-scrollbar-thumb {
+  border: 0;
+  border-radius: 999px;
+  background: #7f8cff; /* 스크롤바 색상 */
+}
+
+.web-detail-main-scroll-inner::-webkit-scrollbar-thumb:hover {
+  background: #6475ff;
+}
+
+/* ---------- Before gallery ---------- */
+.web-detail-before {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin-top: 28px;
+  padding: 28px 30px 30px;
+  overflow: hidden;
+  background: #cbcbcb;
+}
+
+.web-detail-before-grid {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 22px;
+  min-width: 0;
+  overflow-x: auto;
+  padding-bottom: 4px;
+  scrollbar-width: thin;
+}
+
+.web-detail-before-item {
+  flex: 0 0 auto;
+  display: block;
+  width: auto;
+  height: clamp(250px, 20.6vw, 395px);
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #d0d0d0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.web-detail-before-item:hover,
+.web-detail-before-item:focus-visible {
+  transform: none;
+  box-shadow: none;
+}
+
+.web-detail-before-item:focus-visible {
+  outline: 2px solid #0f2fff;
+  outline-offset: 3px;
+}
+
+.web-detail-before-item img {
+  display: block;
+  width: auto;
+  height: 100%;
+  max-width: none;
+  object-fit: contain;
+  object-position: center;
+}
+
+/* WEB-APP-02 BEFORE
+   - PC: 세로 높이만 동일, 가로 폭은 원본 비율 유지
+   - height 값만 바꾸면 전체 이미지 높이를 조절할 수 있습니다. */
+@media (min-width: 1201px) {
+  .web-detail-hero--equal-scroll {
+    display: grid;
+    align-items: stretch;
+  }
+
+  .web-detail-hero--equal-scroll .web-detail-sidebar {
+    height: auto;
+    min-height: 0;
+  }
+
+  .web-detail-hero--equal-scroll .web-detail-card {
+    overflow: visible;
+  }
+
+  .web-detail-hero--equal-scroll .web-detail-main-shot--scroll {
+    align-self: stretch;
+    height: auto;
+  }
+
+  .web-detail-before-grid--four {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 18px;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow-x: hidden; /* PC 기본 */
+    overflow-y: hidden;
+    padding-bottom: 4px;
+    scroll-snap-type: x proximity;
+    overscroll-behavior-inline: contain;
+  }
+
+  .web-detail-before-grid--four .web-detail-before-item {
+    flex: 0 0 auto;
+    width: auto;
+    height: 320px; /* 권장 300~340px */
+    max-width: none;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    scroll-snap-align: start;
+  }
+
+  .web-detail-before-grid--four .web-detail-before-item img {
+    width: auto;
+    height: 100%;
+    max-width: none;
+    object-fit: unset;
+  }
+}
+
+/* ---------- Modal ---------- */
+body.is-modal-open {
+  overflow: hidden;
+}
+
+.project-modal {
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  display: none;
+}
+
+.project-modal.is-open {
+  display: block;
+}
+
+.project-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, .58);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+}
+
+.project-modal__dialog {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 72px minmax(0, auto) 72px;
+  grid-template-rows: 1fr auto;
+  grid-template-areas:
+    "prev figure next"
+    ". close .";
+  align-items: center;
+  justify-content: center;
+  gap: 14px 24px;
+  padding: 38px 24px 28px;
+}
+
+.project-modal__figure {
+  grid-area: figure;
+  width: min(72vw, 920px);
+  height: min(76vh, 820px);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-modal__image {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  object-position: center;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, .24);
+}
+
+.project-modal__nav {
+  width: 64px;
+  height: 64px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 1.3px solid #e7e9f4;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .99);
+  color: #0f2fff;
+  box-shadow:
+    0 10px 15px -3px rgba(46, 49, 69, .1),
+    0 4px 6px -2px rgba(46, 49, 69, .05);
+  cursor: pointer;
+  transition: transform 160ms ease, opacity 160ms ease;
+}
+
+.project-modal__nav img {
+  display: block;
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.project-modal__nav--prev { grid-area: prev; }
+.project-modal__nav--next { grid-area: next; }
+
+.project-modal__nav:hover:not(:disabled) {
+  transform: scale(1.05);
+}
+
+.project-modal__nav:disabled {
+  cursor: default;
+  opacity: .35;
+}
+
+.project-modal__close {
+  grid-area: close;
+  justify-self: center;
+  min-width: 104px;
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 0 22px;
+  border: 1.3px solid rgba(255, 255, 255, .95);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .2);
+  color: #fff;
+  box-shadow:
+    0 10px 15px -3px rgba(46, 49, 69, .1),
+    0 4px 6px -2px rgba(46, 49, 69, .05);
+  font-family: "SUIT", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.project-modal__close-icon {
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+
+.project-modal__close-icon::before,
+.project-modal__close-icon::after {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 0;
+  width: 20px;
+  height: 2px;
+  border-radius: 999px;
+  background: currentColor;
+}
+
+.project-modal__close-icon::before { transform: rotate(45deg); }
+.project-modal__close-icon::after { transform: rotate(-45deg); }
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+@media (max-width: 1200px) {
+  .web-detail-page {
+    padding-inline: 28px;
+  }
+
+  .web-detail-hero {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .web-detail-main-shot {
+    order: -1;
+    width: 100%;
+  }
+
+  .web-detail-sidebar {
+    order: 0;
+    width: 100%;
+  }
+
+  .web-detail-card,
+  .web-detail-before {
+    padding: 24px;
+  }
+
+  .web-detail-main-shot--scroll {
+    position: relative;
+    height: min(78vh, 860px);
+    min-height: 420px;
+    overflow: hidden;
+  }
+
+  .web-detail-before-grid--four {
+    display: flex;
+    justify-content: space-between;
+    gap: 18px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+    scroll-snap-type: x proximity;
+  }
+
+  .web-detail-before-grid--four .web-detail-before-item {
+    flex: 0 0 auto;
+    width: auto;
+    height: clamp(220px, 34vw, 360px);
+    background: transparent;
+    scroll-snap-align: start;
+  }
+
+  .web-detail-before-grid--four .web-detail-before-item img {
+    width: auto;
+    height: 100%;
+    max-width: none;
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 920px) {
+  .web-detail-page {
+    padding-top: 94px;
+  }
+
+  .web-detail-hero,
+  .web-detail-sidebar {
+    gap: 16px;
+  }
+
+  .web-detail-before {
+    margin-top: 16px;
+  }
+
+  .web-detail-before-grid {
+    scroll-snap-type: x proximity;
+  }
+
+  .web-detail-before-item {
+    height: clamp(220px, 48vw, 360px);
+    scroll-snap-align: start;
+  }
+}
+
+@media (max-width: 760px) {
+  .web-detail-view-button .home-button__content img {
+    width: 22px;
+    height: 22px;
+  }
+
+  .project-modal__dialog {
+    grid-template-columns: 48px minmax(0, 1fr) 48px;
+    gap: 10px;
+    padding: 24px 10px 18px;
+  }
+
+  .project-modal__figure {
+    width: 100%;
+    height: min(72svh, 680px);
+  }
+
+  .project-modal__nav {
+    width: 46px;
+    height: 46px;
+  }
+
+  .project-modal__nav img {
+    width: 22px;
+    height: 22px;
+  }
+
+  .project-modal__close {
+    min-width: 92px;
+    height: 44px;
+    padding-inline: 18px;
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 640px) {
+  .web-detail-page {
+    padding: 82px 14px 0;
+  }
+
+  .web-detail-close-button__icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .web-detail-close-button__icon::before,
+  .web-detail-close-button__icon::after {
+    width: 24px;
+    height: 3px;
+  }
+
+  .web-detail-sidebar {
+    gap: 14px;
+  }
+
+  .web-detail-card {
+    padding: 20px;
+    border-radius: 18px;
+  }
+
+  .web-detail-tags {
+    gap: 10px;
+  }
+
+  .web-detail-tag {
+    min-height: 58px;
+    padding: 12px 8px;
+    border-radius: 17px;
+  }
+
+  .web-detail-main-shot {
+    border-radius: 18px;
+  }
+
+  .web-detail-main-shot--scroll {
+    height: min(70vh, 680px);
+    min-height: 360px;
+  }
+
+  .web-detail-before {
+    margin-top: 16px;
+    padding: 20px;
+    border-radius: 18px;
+  }
+}
+
+@media (max-width: 430px) {
+  .web-detail-page {
+    padding-top: 74px;
+  }
+
+  .web-detail-close-button__icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .web-detail-close-button__icon::before,
+  .web-detail-close-button__icon::after {
+    width: 21px;
+    height: 2.5px;
+  }
+
+  .web-detail-before-item {
+    height: 235px;
+  }
+
+  .project-modal__dialog {
+    grid-template-columns: 40px minmax(0, 1fr) 40px;
+    padding-inline: 6px;
+  }
+
+  .project-modal__nav {
+    width: 40px;
+    height: 40px;
+  }
+
+  .project-modal__nav img {
+    width: 19px;
+    height: 19px;
+  }
+}
+
+@media (max-width:1200px){
+  .web-detail-before-grid--four{
+    justify-content:flex-start;
+    overflow-x:auto;
+  }
+}
+
+/* ==========================================================
+   WEB-APP-04 : APP SLIDER
+   - PC: 2개씩 표시
+   - 900px 이하: 1개씩 표시
+   - PC 높이는 JS에서 왼쪽 정보 영역과 정확히 동기화
+========================================================== */
+.web-detail-hero--app04 {
+  grid-template-columns: minmax(300px, 42%) minmax(0, 1fr);
+  align-items: start;
+}
+
+.web-detail-body--app04 .web-detail-sidebar {
+  align-content: start;
+}
+
+.web-app04-slider {
+  position: relative;
+  min-width: 0;
+  min-height: 0;
+  padding-inline: 68px;
+  box-sizing: border-box;
+  overflow: visible;
+}
+
+.web-app04-slider__viewport {
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  padding: 14px 12px 24px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.web-app04-slider__track {
+  display: flex;
+  align-items: stretch;
+  height: 100%;
+  transition: transform .45s ease;
+  will-change: transform;
+}
+
+.web-app04-slider__slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 50%;
+  min-width: 0;
+  height: 100%;
+  margin: 0;
+  padding: 0 12px;
+  box-sizing: border-box;
+}
+
+.web-app04-slider__slide img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: calc(100% - 12px);
+  object-fit: contain;
+  object-position: center;
+  border: 0;
+  border-radius: 25px;
+  background: transparent;
+  box-shadow: none;
+  filter: drop-shadow(0 6px 10px rgba(36, 43, 74, .16));
+}
+
+.web-app04-slider__nav {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .96);
+  box-shadow: 0 2px 10px rgba(40, 55, 110, .18);
+  cursor: pointer;
+  transform: translateY(-50%);
+  line-height: 0;
+}
+
+.web-app04-slider__nav img {
+  display: block;
+  width: 44px;
+  height: 44px;
+  margin: 0;
+  object-fit: contain;
+  object-position: center;
+  pointer-events: none;
+}
+
+.web-app04-slider__nav--prev { left: 0; }
+.web-app04-slider__nav--next { right: 0; }
+
+.web-app04-slider__nav:disabled {
+  opacity: .32;
+  cursor: default;
+}
+
+.web-app04-slider__nav:focus-visible {
+  outline: 2px solid var(--blue, #0f2fff);
+  outline-offset: 4px;
+}
+
+@media (max-width: 1200px) {
+  .web-detail-hero--app04 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .web-app04-slider {
+    order: -1;
+    width: 100%;
+    height: clamp(560px, 72vh, 760px) !important;
+    padding-inline: 56px;
+  }
+
+  .web-detail-hero--app04 .web-detail-sidebar {
+    order: 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .web-app04-slider {
+    height: clamp(520px, 70vh, 680px) !important;
+    padding-inline: 50px;
+  }
+
+  .web-app04-slider__slide {
+    flex-basis: 100%;
+    padding-inline: 8px;
+  }
+
+  .web-app04-slider__nav {
+    width: 46px;
+    height: 46px;
+  }
+
+  .web-app04-slider__nav img {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@media (max-width: 560px) {
+  .web-app04-slider {
+    height: clamp(460px, 66vh, 600px) !important;
+    padding-inline: 42px;
+  }
+
+  .web-app04-slider__viewport {
+    padding: 10px 8px 20px;
+  }
+
+  .web-app04-slider__nav {
+    width: 40px;
+    height: 40px;
+  }
+
+  .web-app04-slider__nav img {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+
+/* ==========================================================
+   WEB-APP-04 : INACTIVE SLIDE MASK + FADE
+   ----------------------------------------------------------
+   - 화면에 필요한 슬라이드만 표시합니다.
+   - 대기 중인 이전/다음 이미지와 그림자는 완전히 숨깁니다.
+   - 이동할 슬라이드는 슬라이드 시작과 함께 부드럽게 나타납니다.
+========================================================== */
+.web-app04-slider__viewport {
+  overflow: hidden;
+  isolation: isolate;
+  clip-path: inset(0);
+}
+
+.web-app04-slider__slide {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .32s ease;
+}
+
+.web-app04-slider__slide.is-visible,
+.web-app04-slider__slide.is-entering {
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.web-app04-slider__slide.is-visible {
+  opacity: 1;
+}
+
+.web-app04-slider__slide.is-entering {
+  opacity: 0;
+}
+
+.web-app04-slider.is-animating .web-app04-slider__slide.is-entering {
+  opacity: 1;
+}
+
+/* 숨긴 슬라이드의 그림자가 화면 밖으로 비치는 현상 방지 */
+.web-app04-slider__slide:not(.is-visible):not(.is-entering) img {
+  filter: none !important;
+}

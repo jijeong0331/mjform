@@ -1,0 +1,107 @@
+[
+  {
+    "file": "about.css",
+    "before_lines": 379,
+    "after_lines": 378,
+    "before_bytes": 5735,
+    "after_bytes": 5663
+  },
+  {
+    "file": "ai-storybook.css",
+    "before_lines": 608,
+    "after_lines": 590,
+    "before_bytes": 10756,
+    "after_bytes": 9615
+  },
+  {
+    "file": "banner.css",
+    "before_lines": 353,
+    "after_lines": 346,
+    "before_bytes": 6811,
+    "after_bytes": 6517
+  },
+  {
+    "file": "book.css",
+    "before_lines": 412,
+    "after_lines": 408,
+    "before_bytes": 6425,
+    "after_bytes": 6182
+  },
+  {
+    "file": "branding.css",
+    "before_lines": 1831,
+    "after_lines": 1941,
+    "before_bytes": 39282,
+    "after_bytes": 34689
+  },
+  {
+    "file": "cassette.css",
+    "before_lines": 353,
+    "after_lines": 346,
+    "before_bytes": 6829,
+    "after_bytes": 6529
+  },
+  {
+    "file": "common.css",
+    "before_lines": 181,
+    "after_lines": 157,
+    "before_bytes": 2933,
+    "after_bytes": 2383
+  },
+  {
+    "file": "index.css",
+    "before_lines": 521,
+    "after_lines": 501,
+    "before_bytes": 9540,
+    "after_bytes": 8867
+  },
+  {
+    "file": "leaflet.css",
+    "before_lines": 510,
+    "after_lines": 550,
+    "before_bytes": 9800,
+    "after_bytes": 9614
+  },
+  {
+    "file": "print-design.css",
+    "before_lines": 351,
+    "after_lines": 353,
+    "before_bytes": 6933,
+    "after_bytes": 6643
+  },
+  {
+    "file": "project-common.css",
+    "before_lines": 340,
+    "after_lines": 304,
+    "before_bytes": 6718,
+    "after_bytes": 5814
+  },
+  {
+    "file": "subpage-header.css",
+    "before_lines": 177,
+    "after_lines": 176,
+    "before_bytes": 3591,
+    "after_bytes": 3502
+  },
+  {
+    "file": "subpage.css",
+    "before_lines": 23,
+    "after_lines": 23,
+    "before_bytes": 349,
+    "after_bytes": 349
+  },
+  {
+    "file": "web-app-detail.css",
+    "before_lines": 955,
+    "after_lines": 695,
+    "before_bytes": null,
+    "after_bytes": 13194
+  },
+  {
+    "file": "web-app.css",
+    "before_lines": 109,
+    "after_lines": 119,
+    "before_bytes": 2287,
+    "after_bytes": 2234
+  }
+]
