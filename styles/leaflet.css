@@ -388,6 +388,8 @@ body {
   .leaflet-grid--two,
   .leaflet-grid--showcase {
     grid-template-columns: 1fr;
+    margin-top: 16px;
+    gap: 16px;
   }
 
   .leaflet-grid--showcase {
