@@ -373,6 +373,7 @@ body {
   .leaflet-concept {
     height: auto;
     min-height: 330px;
+    margin-top: 16px;
   }
 
   .leaflet-concept__overlay {
