@@ -389,12 +389,13 @@ body {
   .leaflet-grid--two,
   .leaflet-grid--showcase {
     grid-template-columns: 1fr;
-    margin-top: 16px;
-    gap: 16px;
+    margin-top: 0;
+    gap: 0;
   }
 
   .leaflet-grid--showcase {
     aspect-ratio: auto;
+    margin-top: 0;
   }
 
   .leaflet-showcase {
