@@ -368,6 +368,7 @@ body {
   .leaflet-card,
   .leaflet-section {
     border-radius: 18px;
+    margin-top: 16px;
   }
 
   .leaflet-concept {
@@ -487,6 +488,7 @@ body {
   .leaflet-color,
   .leaflet-font {
     padding: 20px;
+    margin-top: 16px;
   }
 
   .leaflet-concept__copy p {
