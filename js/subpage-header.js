@@ -8,14 +8,14 @@
   const iconSrc = header.dataset.iconSrc || `${base}/assets/print-design/Home_icon.svg`;
 
   const menuItems = [
-    { key: "book", label: "Book", href: `${base}/pages/book.html` },
     { key: "print", label: "Print", href: `${base}/pages/print-design.html` },
-    { key: "web", label: "Web/App", href: `${base}/pages/web-app.html` },
     { key: "banner", label: "Banner", href: `${base}/pages/banner.html` },
     { key: "cassette", label: "Cassette", href: `${base}/pages/cassette.html` },
-    { key: "ai-storybook", label: "AI Storybook", href: `${base}/pages/ai-storybook.html` },
+    { key: "book", label: "Book", href: `${base}/pages/book.html` },
     { key: "leaflet", label: "Leaflet", href: `${base}/pages/leaflet.html` },
-    { key: "branding", label: "Branding", href: `${base}/pages/branding.html` }
+    { key: "branding", label: "Branding", href: `${base}/pages/branding.html` },
+    { key: "ai-storybook", label: "AI Storybook", href: `${base}/pages/ai-storybook.html` },
+    { key: "web", label: "Web/App", href: `${base}/pages/web-app.html` }
   ];
 
   const titleToKey = {
