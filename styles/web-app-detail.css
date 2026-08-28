@@ -261,7 +261,16 @@ body.web-detail-body {
   min-width: 0;
   overflow-x: auto;
   padding-bottom: 4px;
-  scrollbar-width: thin;
+
+  /* 가로 스크롤 기능은 유지하고 스크롤바만 숨김 */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.web-detail-before-grid::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
 }
 
 .web-detail-before-item {
