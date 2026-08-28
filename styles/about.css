@@ -36,8 +36,9 @@ body.about-page {
   letter-spacing: -.025em;
 }
 
+/* 닫기 버튼은 페이지 상단 우측에 고정되며, 스크롤 시 화면을 따라오지 않음 */
 .about-close {
-  position: fixed;
+  position: absolute;
   z-index: 20;
   top: 26px;
   right: 34px;
@@ -375,3 +376,463 @@ body.about-page {
     height: auto;
   }
 }
+
+/* ==========================================================
+   ABOUT CONTENT RESPONSIVE — TABLET / PC
+   ----------------------------------------------------------
+   - About Me 타이틀 / 상단 닫기 버튼은 수정하지 않음
+   - 사진 / 정보 / Skills 영역만 화면 높이에 맞춰 축소
+   - 821px 이상에서는 콘텐츠가 한 화면 안에 들어오도록 조정
+   - 820px 이하 모바일은 기존 스크롤 레이아웃 유지
+========================================================== */
+@media (min-width: 821px) {
+  .about-content {
+    grid-template-columns:
+      minmax(240px, clamp(240px, min(32vw, 50vh), 448px))
+      minmax(260px, clamp(280px, 28vw, 400px));
+    gap: clamp(30px, 4vw, 82px);
+    width: min(1050px, 100%);
+    margin-top: clamp(26px, 5vh, 82px);
+  }
+
+  .profile-visual {
+    width: clamp(240px, min(32vw, 50vh), 448px);
+    padding-top: clamp(18px, 3vh, 34px);
+  }
+
+  .profile-frame {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 448 / 546;
+  }
+
+  .profile-image {
+    top: 7.15%;
+    left: 7.15%;
+    width: 85.7%;
+    height: 86.63%;
+  }
+
+  .profile-me {
+    top: clamp(-46px, -5vh, -26px);
+    left: clamp(-42px, -3vw, -20px);
+    width: clamp(72px, min(8vw, 12vh), 122px);
+    height: auto;
+  }
+
+  .profile-info {
+    padding-top: clamp(0px, 1.5vh, 16px);
+    font-size: clamp(15px, min(1.45vw, 2.4vh), 22px);
+    line-height: 1.4;
+  }
+
+  .profile-basic {
+    gap: clamp(7px, 1.35vh, 15px);
+    margin-bottom: clamp(10px, 1.8vh, 20px);
+  }
+
+  .profile-basic > div {
+    grid-template-columns:
+      clamp(82px, 8vw, 112px)
+      clamp(10px, 1.2vw, 18px)
+      1fr;
+  }
+
+  .profile-basic dt,
+  .profile-basic dd,
+  .info-section h2 {
+    font-size: clamp(17px, min(1.7vw, 2.7vh), 25px);
+  }
+
+  .info-section {
+    margin-top: clamp(10px, 1.8vh, 20px);
+  }
+
+  .info-section h2 {
+    margin-bottom: clamp(4px, .7vh, 7px);
+  }
+
+  .info-section ul {
+    padding-left: clamp(15px, 1.5vw, 19px);
+    font-size: clamp(13px, min(1.25vw, 2vh), 18px);
+    line-height: clamp(1.45, 1.5, 1.75);
+  }
+
+  .skills-section {
+    margin-top: clamp(10px, 1.8vh, 20px);
+  }
+
+  .skill-icons {
+    grid-template-columns: repeat(4, clamp(40px, min(4.5vw, 7vh), 60px));
+    gap: clamp(5px, .7vw, 8px);
+  }
+
+  .skill-icons img {
+    width: clamp(40px, min(4.5vw, 7vh), 60px);
+    height: clamp(40px, min(4.5vw, 7vh), 60px);
+  }
+}
+
+/* 낮은 태블릿 / 노트북 화면에서 콘텐츠만 한 단계 더 축소 */
+@media (min-width: 821px) and (max-height: 700px) {
+  .about-content {
+    grid-template-columns:
+      minmax(220px, clamp(220px, min(29vw, 45vh), 360px))
+      minmax(250px, 330px);
+    gap: clamp(26px, 3.5vw, 54px);
+    margin-top: clamp(18px, 3vh, 34px);
+  }
+
+  .profile-visual {
+    width: clamp(220px, min(29vw, 45vh), 360px);
+    padding-top: 16px;
+  }
+
+  .profile-info {
+    padding-top: 0;
+  }
+
+  .profile-basic {
+    gap: 6px;
+    margin-bottom: 9px;
+  }
+
+  .profile-basic dt,
+  .profile-basic dd,
+  .info-section h2 {
+    font-size: clamp(16px, 2.6vh, 20px);
+  }
+
+  .info-section {
+    margin-top: 8px;
+  }
+
+  .info-section ul {
+    font-size: clamp(12px, 2vh, 15px);
+    line-height: 1.45;
+  }
+
+  .skills-section {
+    margin-top: 8px;
+  }
+
+  .skill-icons {
+    grid-template-columns: repeat(4, clamp(36px, 6.5vh, 48px));
+    gap: 5px;
+  }
+
+  .skill-icons img {
+    width: clamp(36px, 6.5vh, 48px);
+    height: clamp(36px, 6.5vh, 48px);
+  }
+}
+
+/* 세로가 특히 짧은 가로형 태블릿/노트북 */
+@media (min-width: 821px) and (max-height: 560px) {
+  .about-content {
+    grid-template-columns: minmax(195px, 235px) minmax(235px, 300px);
+    gap: 24px;
+    margin-top: 12px;
+  }
+
+  .profile-visual {
+    width: min(235px, 29vw);
+    padding-top: 12px;
+  }
+
+  .profile-me {
+    top: -24px;
+    left: -18px;
+    width: 62px;
+  }
+
+  .profile-basic dt,
+  .profile-basic dd,
+  .info-section h2 {
+    font-size: 15px;
+  }
+
+  .profile-basic {
+    gap: 4px;
+    margin-bottom: 6px;
+  }
+
+  .info-section {
+    margin-top: 6px;
+  }
+
+  .info-section ul {
+    font-size: 11px;
+    line-height: 1.35;
+  }
+
+  .skills-section {
+    margin-top: 6px;
+  }
+
+  .skill-icons {
+    grid-template-columns: repeat(4, 34px);
+    gap: 4px;
+  }
+
+  .skill-icons img {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+/* =========================================================
+   About Me 콘텐츠 반응형 보정
+   - About Me 타이틀 / 상단 닫기 버튼은 수정하지 않음
+   - 821px 이상에서 사진·정보·스킬 영역만 화면 높이에 맞춤
+   - 하단에 항상 여백을 확보해 잘린 듯한 인상을 방지
+   - 모바일(820px 이하)은 기존 스타일 유지
+   ========================================================= */
+@media (min-width: 821px) {
+  body.about-page {
+    overflow-y: hidden;
+  }
+
+  .about-screen {
+    height: 100dvh;
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .about-content {
+    /* 하단 약 36px 이상의 시각적 여백을 남기도록 콘텐츠 영역 제한 */
+    max-height: calc(100dvh - 245px);
+    margin-top: clamp(54px, 7vh, 100px);
+  }
+
+  .profile-visual {
+    width: min(448px, calc((100dvh - 300px) * 0.82));
+    padding-top: clamp(20px, 3.2vh, 34px);
+  }
+
+  .profile-frame {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 448 / 546;
+  }
+
+  .profile-image {
+    top: 7.15%;
+    left: 7.15%;
+    width: 85.7%;
+    height: 86.63%;
+  }
+
+  .profile-me {
+    width: clamp(88px, 7vw, 122px);
+    height: auto;
+  }
+}
+
+/* 세로가 짧은 PC / 가로형 태블릿: 콘텐츠만 한 단계 더 컴팩트하게 */
+@media (min-width: 821px) and (max-height: 820px) {
+  .about-content {
+    margin-top: 42px;
+    gap: clamp(42px, 4.2vw, 72px);
+  }
+
+  .profile-info {
+    padding-top: 0;
+    font-size: 18px;
+    line-height: 1.35;
+  }
+
+  .profile-basic {
+    gap: 9px;
+    margin-bottom: 12px;
+  }
+
+  .profile-basic dt,
+  .profile-basic dd,
+  .info-section h2 {
+    font-size: 22px;
+  }
+
+  .info-section,
+  .skills-section {
+    margin-top: 12px;
+  }
+
+  .info-section ul {
+    font-size: 16px;
+    line-height: 1.55;
+  }
+
+  .skill-icons {
+    grid-template-columns: repeat(4, 50px);
+    gap: 7px;
+  }
+
+  .skill-icons img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+
+/* =========================================================
+   About Me 콘텐츠 여백 / 비율 최종 보정 (태블릿·PC)
+   ---------------------------------------------------------
+   - About Me 타이틀 / 설명 / 닫기 버튼은 수정하지 않음
+   - 사진 + 정보 + Skills 영역만 조정
+   - 상단 설명문과 ME 영역 사이 여백 확보
+   - 사진/정보 두 컬럼 폭을 균형 있게 맞춰 콘텐츠를 중앙 배치
+   - 하단에도 충분한 여백 확보
+   - 모바일(820px 이하)은 기존 스타일 유지
+   ========================================================= */
+@media (min-width: 821px) {
+  .about-content {
+    /* 상단 설명문과 ME :)가 겹치지 않도록 간격 확보 */
+    margin: clamp(88px, 10vh, 128px) auto 0;
+
+    /* 좌우가 한쪽으로 치우쳐 보이지 않도록 전체 콘텐츠 폭 제한 */
+    width: min(1040px, calc(100% - 96px));
+
+    /* 사진 영역과 정보 영역을 같은 폭으로 잡아 시각적 중심 맞춤 */
+    grid-template-columns:
+      minmax(260px, 1fr)
+      minmax(260px, 1fr);
+
+    justify-content: center;
+    align-items: center;
+    gap: clamp(48px, 5.5vw, 88px);
+
+    max-height: none;
+  }
+
+  .profile-visual {
+    justify-self: end;
+
+    /*
+      세로가 짧아질수록 사진 영역도 함께 축소.
+      상단/하단 여백을 확보하기 위해 기존보다 최대 크기를 조금 줄임.
+    */
+    width: min(
+      420px,
+      42vw,
+      calc((100dvh - 355px) * 0.78)
+    );
+    min-width: 230px;
+    padding-top: clamp(22px, 3vh, 32px);
+  }
+
+  .profile-frame {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 448 / 546;
+  }
+
+  .profile-image {
+    top: 7.15%;
+    left: 7.15%;
+    width: 85.7%;
+    height: 86.63%;
+  }
+
+  .profile-info {
+    justify-self: start;
+    width: min(100%, 420px);
+    padding-top: 0;
+  }
+
+  .profile-me {
+    width: clamp(82px, 6.5vw, 112px);
+    height: auto;
+  }
+}
+
+/* 세로가 짧은 노트북 / 가로형 태블릿 */
+@media (min-width: 821px) and (max-height: 820px) {
+  .about-content {
+    margin-top: clamp(74px, 8vh, 92px);
+    width: min(940px, calc(100% - 72px));
+    gap: clamp(40px, 4.5vw, 68px);
+  }
+
+  .profile-visual {
+    width: min(
+      380px,
+      39vw,
+      calc((100dvh - 315px) * 0.78)
+    );
+    min-width: 220px;
+  }
+}
+
+/* 특히 세로가 짧은 화면 */
+@media (min-width: 821px) and (max-height: 700px) {
+  .about-content {
+    margin-top: 66px;
+    width: min(860px, calc(100% - 64px));
+    gap: 42px;
+  }
+
+  .profile-visual {
+    width: min(
+      300px,
+      36vw,
+      calc((100dvh - 275px) * 0.76)
+    );
+    min-width: 200px;
+    padding-top: 18px;
+  }
+
+  .profile-info {
+    width: min(100%, 350px);
+  }
+}
+
+
+/* =========================================================
+   사진 + 정보 영역의 실제 크기를 기준으로 중앙 정렬
+   ---------------------------------------------------------
+   정보 폰트 크기를 변경해도 두 영역을 하나의 콘텐츠 묶음으로
+   가운데 배치하도록 about-content 자체를 fit-content로 구성합니다.
+   모바일(820px 이하)은 기존 레이아웃을 유지합니다.
+   ========================================================= */
+@media (min-width: 821px) {
+  .about-content {
+    /* 기존 고정 폭/1fr 컬럼을 덮어쓰고 실제 콘텐츠 폭으로 계산 */
+    width: fit-content;
+    max-width: calc(100% - 96px);
+
+    grid-template-columns: auto auto;
+    column-gap: clamp(48px, 5vw, 82px);
+
+    /* 콘텐츠 묶음 전체를 화면 중앙에 배치 */
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+  }
+
+  .profile-visual,
+  .profile-info {
+    justify-self: center;
+  }
+
+  /* 정보 폰트가 커져도 불필요하게 고정 폭에 묶이지 않도록 함 */
+  .profile-info {
+    width: max-content;
+    max-width: min(430px, 38vw);
+  }
+}
+
+@media (min-width: 821px) and (max-height: 820px) {
+  .about-content {
+    width: fit-content;
+    max-width: calc(100% - 72px);
+  }
+}
+
+@media (min-width: 821px) and (max-height: 700px) {
+  .about-content {
+    width: fit-content;
+    max-width: calc(100% - 64px);
+  }
+}
+
