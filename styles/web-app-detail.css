@@ -1024,8 +1024,3 @@ body.is-modal-open {
 }
 
 
-/* BEFORE 무한 슬라이드용 복제 이미지
-   화면 표시용이며 클릭 모달 대상에서는 제외합니다. */
-.web-detail-before-item.is-before-clone {
-  pointer-events: none;
-}
