@@ -72,19 +72,19 @@
     thumbnail.addEventListener("click", () => openModal(index));
 
     if (cursorTag) {
-      thumbnail.addEventListener("pointerenter", (event) => {
+      thumbnail.addEventListener("mouseenter", (event) => {
         cursorTag.textContent = thumbnail.dataset.tag || "View";
         cursorTag.classList.add("is-visible");
         cursorTag.style.left = `${event.clientX + 22}px`;
         cursorTag.style.top = `${event.clientY - 22}px`;
       });
 
-      thumbnail.addEventListener("pointermove", (event) => {
+      thumbnail.addEventListener("mousemove", (event) => {
         cursorTag.style.left = `${event.clientX + 22}px`;
         cursorTag.style.top = `${event.clientY - 22}px`;
       });
 
-      thumbnail.addEventListener("pointerleave", () => {
+      thumbnail.addEventListener("mouseleave", () => {
         cursorTag.classList.remove("is-visible");
       });
     }

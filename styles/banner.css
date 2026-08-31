@@ -338,8 +338,3 @@ body.is-modal-open {
   }
 }
 
-@media (hover: none), (pointer: coarse) {
-  .thumbnail-cursor-tag {
-    display: none;
-  }
-}

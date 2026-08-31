@@ -84,12 +84,6 @@ body {
   transform: translate3d(-50%, -50%, 0) scale(1);
 }
 
-@media (hover: none), (pointer: coarse) {
-  .web-app-cursor-label {
-    display: none;
-  }
-}
-
 @media (max-width: 1400px) {
   .web-app-grid {
     gap: 16px;
