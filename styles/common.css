@@ -169,4 +169,10 @@ body {
     width: 36px;
     height: 36px;
   }
+
+  .ai-notice{
+    font-size: 14px;
+    margin: 20px;
+    font-weight: 200;
+  }
 }
