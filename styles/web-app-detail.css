@@ -250,7 +250,8 @@ body.web-detail-body {
   margin-top: 28px;
   padding: 28px 30px 30px;
   overflow: hidden;
-  background: #cbcbcb;
+  background: #e8eaed;
+  border: solid #c6c9cc 1px;
 }
 
 .web-detail-before-grid {
