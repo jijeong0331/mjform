@@ -86,7 +86,7 @@
 .physics-zone {
   position: absolute;
   z-index: 10;
-  right: 3.2vw;
+  right: 3vw;
   top: 17vh;
   width: min(57vw, 930px);
   height: 76vh;
