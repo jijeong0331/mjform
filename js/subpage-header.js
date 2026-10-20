@@ -24,7 +24,7 @@
     "Web/App": "web",
     "Web • App": "web",
     "Banner Design": "banner",
-    // "Cassette": "cassette",
+    "Cassette": "cassette",
     "AI Storybook": "ai-storybook",
     "Leaflet": "leaflet",
     "Branding Design": "branding"
