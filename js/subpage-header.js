@@ -10,7 +10,7 @@
   const menuItems = [
     { key: "print", label: "Print", href: `${base}/pages/print-design.html` },
     { key: "banner", label: "Banner", href: `${base}/pages/banner.html` },
-    // { key: "cassette", label: "Cassette", href: `${base}/pages/cassette.html` },
+    { key: "cassette", label: "Cassette", href: `${base}/pages/cassette.html` },
     { key: "book", label: "Book", href: `${base}/pages/book.html` },
     { key: "leaflet", label: "Leaflet", href: `${base}/pages/leaflet.html` },
     { key: "branding", label: "Branding", href: `${base}/pages/branding.html` },
