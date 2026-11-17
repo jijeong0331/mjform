@@ -67,6 +67,14 @@ body.is-modal-open {
   background-image: url("../assets/cassette/cassette_thumbnail_06.webp");
 }
 
+.cassette-thumbnail--07 {
+  background-image: url("../assets/cassette/cassette_thumbnail_07.webp");
+}
+
+.cassette-thumbnail--08 {
+  background-image: url("../assets/cassette/cassette_thumbnail_08.webp");
+}
+
 .thumbnail-cursor-tag {
   position: fixed;
   z-index: 900;

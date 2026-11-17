@@ -21,7 +21,9 @@
         "../assets/cassette/view_cassette_05-2.webp"
       ]
     },
-    { title: "Cassette 06", images: ["../assets/cassette/view_cassette_06.webp"] }
+    { title: "Cassette 06", images: ["../assets/cassette/view_cassette_06.webp"] },
+    { title: "Cassette 07", images: ["../assets/cassette/view_cassette_07.webp"] },
+    { title: "Cassette 08", images: ["../assets/cassette/view_cassette_08.webp"] }
   ];
 
   let activeProjectIndex = 0;
@@ -68,8 +70,8 @@
     if (lastFocusedElement) lastFocusedElement.focus();
   }
 
-  thumbnails.forEach((thumbnail, index) => {
-    thumbnail.addEventListener("click", () => openModal(index));
+  thumbnails.forEach((thumbnail) => {
+    thumbnail.addEventListener("click", () => openModal(Number(thumbnail.dataset.project)));
 
     if (cursorTag) {
       thumbnail.addEventListener("mouseenter", (event) => {
