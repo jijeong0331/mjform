@@ -1572,6 +1572,7 @@ body {
 .branding-logo-detail p {
   font-size: clamp(18px, 0.9vw, 18px);
   line-height: 1.35;
+  font-weight: 600;
 }
 
 .branding-layout--type-color .branding-typography,
